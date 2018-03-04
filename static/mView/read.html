@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>阅读-QC轻小说</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+  <meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+  <meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+  <link rel="stylesheet" type="text/css" href="../css/main_app_c081deb24e.css" />
+  <style type="text/css">
+  [v-cloak] {display:none;}
+ 	.readBook {font-size:20px;color:#404040;position:relative;overflow-x: hidden;}
+ 	.readBook .cephalosome {position: fixed;width: 100%;}
+	.readBook .bookMain .headLine {margin-top:23px;}
+	.readBook .bookMain .headLine .bookName {display:inline-block;font-size:22px;margin-left:20px;vertical-align:top;}
+	.readBook .bookMain .headLine .volumeName {display:inline-block;font-size:22px;float:right;margin-right:16px;}
+	.readBook .bookMain .chapterName {margin-top: .9rem;font-size:24px;text-align:center;}
+	.readBook .bookMain .chapterInfo {text-align:center;font-size:0px;color:#737373;margin-top:5px;}
+	.readBook .bookMain .chapterInfo .author p{line-height: 1.5;font-size: 12px;}
+	.readBook .bookMain .chapterInfo .wordNums p{line-height: 1.5;font-size: 12px;}
+	.readBook .bookMain .chapterInfo .updateTime p{line-height: 1.5;font-size: 12px;margin-right: 0;}
+	.readBook .bookMain .chapterInfo>div {display:inline-block;margin-right:36px;}
+	.readBook .bookMain .bookContent {min-height:80px;padding:10px 10px;text-align: center;}
+	.readBook .bookMain .bookContent p {
+	font-family: inherit;
+	line-height:1.5;
+	-webkit-text-align: justify;
+	-o-text-align: justify;
+	-moz-text-align: justify;
+	-ms-text-align: justify;
+	text-align: justify;
+	}
+	.readBook .bookMain .bookContent *{
+		color:inherit !important;
+	}
+	
+	.readBook .bookMain .nextChapter {font-size: 24px;text-align:center;margin-bottom:60px;}
+	.readBook .bookMain .nextChapter a {display:inline-block;color:#404040;}
+	.readBook .setUp {background-color:#443D31;width:100%;position:fixed;bottom:0;z-index:10;}
+	
+	.readBook .setUp .chapter {padding:10px 23px;position:relative;font-size:16px;line-height: 1;color:#B6B6B6;border-bottom:1px solid #5E5E5E;}
+	.readBook .setUp .chapter a {color:#B6B6B6;}
+	.readBook .setUp .chapter .chapterName {text-align:center;font-size:16px;margin:0 auto;}
+	.readBook .setUp .chapter .chapterName p {color:#A1A1A1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;margin:0px 36px;}
+	.readBook .setUp .chapter .pre {position:absolute;top:10px;left:13px;}
+	.readBook .setUp .chapter .next {position:absolute;top:10px;right:13px;}
+	
+	.readBook .setUp .options {padding:5px 0;max-width: 750px;margin: 0 auto;overflow: hidden;}
+	.readBook .setUp .options > div {display:block;float: left;font-size:12px;color:#A1A1A1;text-align:center;vertical-align:top;}
+	.readBook .setUp .options div a {display:block;color:#A1A1A1;}
+	.readBook .setUp .options div p {color:#A1A1A1;}
+	.readBook .setUp .options div img {height:14px;}
+	.readBook .setUp .options .directory {width: 33%;}
+	.readBook .setUp .options .night {width: 34%;}
+	.readBook .setUp .options .font {width: 33%;}
+	.readBook .readBackground {background-color:#443D31;width:100%;position:fixed;bottom:0;}
+	.readBook .readBackground .backgroundColor {padding: 5px 0;text-align:center;border-bottom:1px solid #68655F;font-size: 0;line-height: 1;}
+	.readBook .readBackground .backgroundColor > span {display:inline-block;margin:0 10px;width:24px;height: 24px;border-radius:100px;}
+	.readBook .readBackground .backgroundColor .colorOne {background-color:#EAEAEF;}
+	.readBook .readBackground .backgroundColor .colorTwo {background-color:#FAF9DE;}
+	.readBook .readBackground .backgroundColor .colorThree {background-color:#FFF2E2;}
+	.readBook .readBackground .backgroundColor .colorFour {background-color:#FDE6E0;}
+	.readBook .readBackground .backgroundColor .colorFive {background-color:#E3EDCD;}
+	.readBook .readBackground .backgroundColor .colorSix {background-color:#DCF6DD;}
+	.readBook .readBackground .backgroundColor .colorSeven {background-color:#E9EBFE;}
+	.readBook .readBackground .backgroundColor .colorSelected {border: 2px solid #EE7271;}
+	.readBook .readBackground .font {color:#D9D9D9;max-width: 750px;margin: 0 auto;overflow: hidden;padding: 10px 0;}
+	.readBook .readBackground .font .fontSize {display:block;float: left;margin-left:7.5%;width: 55%;margin-right:2.5%;text-align: center;margin-top: 5px;}
+	.readBook .readBackground .font .fontSize .bigger {color:#D9D9D9;display:inline-block;font-size:18px;position:relative;bottom:5px;}
+	.readBook .readBackground .font .fontSize sup{color:inherit}
+	.readBook .readBackground .font .fontSize .smaller {color:#D9D9D9;display:inline-block;font-size:14px;position:relative;bottom:5px;}
+	.readBook .readBackground .font .fontSize .range {display:inline-block;width:60%;position:relative;bottom:12px;background-color: white;height: 1px;margin: 0 3px;margin-right: 10px;}
+	.readBook .readBackground .font .fontSize .range .circular{height:18px;width: 18px;position: absolute;border-radius:100px;background-color: white;top: -8px;left: 0%;}
+	.readBook .readBackground .font .light {margin-right: 2.5%;display:block;float: left;width: 36px;height:36px;border: 1px solid #5F5B55;border-radius:100px;background-color:#36322A;text-align:center;vertical-align:top;}
+	.readBook .readBackground .font .light img {width:20px;height: 20px;vertical-align:top;margin-top:8px;}
+	.readBook .readBackground .font .fontFamily {
+	    font-size: 12px;
+	    display: block;
+	    float: left;
+	    height: 25px;
+	    line-height: 25px;
+	    vertical-align: top;
+	    margin-left: 2.5%;
+	    margin-right: 2.5%;
+	    width: 75px;
+	    border: 1px solid #57534C;
+	    padding: 0px 5px;
+	    border-radius: 6px;
+	    margin-top: 3px;
+	    position: relative;
+	}
+	.readBook .readBackground .font .fontSize .smaller sub{color:#D9D9D9;}
+	.readBook .readBackground .font .fontFamily a {display:inline-block;font-size:24px;color:#7D7D7D;vertical-align:top;margin-top: 1px;}
+	.readBook .readBackground .font .fontFamily p {
+		display: inline-block;color:#D9D9D9;
+    }
+	.readBook .readBackground .font .fontFamily img {
+			width: 15px;
+	    height: 15px;
+	    position: absolute;
+	    top: 4.5px;
+	    right: 2px;
+    }
+  .readBook .readFont{background-color:#443D31;position: fixed;bottom: 0;left: 0;padding-top: 10px;width: 100%;}
+	.readBook .readFont a {font-size:14px;color:#B6B6B6;display:block;height: 20px;line-height: 20px;}
+	.readBook .readFont > div {padding-bottom:10px;padding-left:25px;position:relative;}
+	.readBook .readFont > div p{color:#D9D9D9;}
+	.readBook .readFont > div p span{color:#D9D9D9;}
+	.readBook .readFont div .selected {
+		width: 14px;
+    height: 14px;
+    position: absolute;web
+    vertical-align: top;
+    top: 0.5px;
+    left:3px;
+    }
+	.readBook .readFont .fontSelected {color:#f56161;}
+	.readBook .readFont .fontSelected span{color:#f56161}
+	
+	@media only screen and (min-width: 360px) and (max-width: 479px) {
+		
+		.readBook .readBackground .backgroundColor > span {display:inline-block;margin:0 10px;width:30px;height: 30px;border-radius:100px;}
+	}
+	@media only screen and (min-width: 480px) and (max-width: 599px) {
+	
+		.readBook .readBackground .backgroundColor > span {display:inline-block;margin:0 10px;width:40px;height: 40px;border-radius:100px;}
+	}
+  </style>
+</head>
+<body id="readBook"  v-show="displayFlag" style="display: none;"  :style="'background-color: ' + backColor">
+  <div class="readBook">
+  	
+  	<div class="cephalosome" :style="backColor == '#323536' ? 'box-shadow:none;background-color:#443D31;':'background-color:#443D31;box-shadow:none;'" v-show="readMenu">
+  		<div class="commonHead" >
+	      <img @click="back" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+	      <a :href="'./comment.html?bookId=' + data.bookId">
+	        <img class="catalog" src="http://cdn.qcacg.com/img/app_index/read_031_update.png"/>
+	      </a>
+	    </div>
+	  </div>
+    
+    
+    
+    <div class="bookMain" :style="'font-family:' + fontFamily + ';color:' + fontColor + ';font-size:' + fontSize + 'px;'">
+      
+      <div class="chapterName"  :style="'font-family:' + fontFamily + ';'">
+        <p :style="'font-size: ' + bigSize + 'px;' + ';color:' + fontColor" v-cloak>{{chapterName}}</p>
+      </div>
+      <div class="chapterInfo"  :style="'font-family:' + fontFamily + ';'">
+        <div class="author">
+          <p :style="'font-size: ' + smallSize + 'px;' + ';color:' + fontColor" v-cloak>作者：{{bookAuthor}}</p>
+        </div>
+        <div class="wordNums">
+          <p :style="'font-size: ' + smallSize + 'px;' + ';color:' + fontColor" v-cloak>字数：{{contentNums}}</p>
+        </div>
+        <div class="updateTime">
+          <p :style="'font-size: ' + smallSize + 'px;' + ';color:' + fontColor" v-cloak>更新时间：{{bookUpdate}}</p>
+        </div>
+      </div>
+      <div class="bookContent" @click="showMenu" :style="'font-family:' + fontFamily + ';' + 'color:' + fontColor">
+        <p v-cloak>{{{bookContent}}}</p>
+      </div>
+      <div class="nextChapter">
+        <a v-if=" nextContent == null "  @click="nextFn" :style="'font-size: ' + bigSize + 'px;'">返回目录</a>
+        <a v-else  @click="nextFn" :style="'font-size: ' + bigSize + 'px;'">点击进入下一章</a> 
+      </div>
+    </div>
+    <div class="setUp" style="display: none;" v-show="readMenu">
+      <div class="chapter">
+        <div class="pre">
+          <a v-if=" previousContent== null " @click="pre"></a>
+          <a v-else @click="pre">上一章</a>
+        </div>
+        <div class="chapterName">
+          <p v-cloak>{{chapterName}}</p>
+        </div>
+        <div class="next">
+          <a v-if="nextContent == null " @click="pre"></a>
+          <a v-else @click="nextFn">下一章</a>
+        </div>
+      </div>
+      <div class="options">
+        <div class="directory">
+          <a @click="catalogFn">
+            <img src="http://cdn.qcacg.com/img/app_index/read_01.png"/>
+            <p>目录</p>
+          </a>
+        </div>
+        <div class="night">
+          <a href="javascript:;" @click="toNight">
+            <img src="http://cdn.qcacg.com/img/app_index/read_02.png"/>
+            <p>夜间模式</p>
+          </a>
+        </div>
+        <div class="font">
+          <a href="javascript:;" @click="showReadBack">
+            <img src="http://cdn.qcacg.com/img/app_index/read_04.png"/>
+            <p>设置</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="readBackground" style="display: none;" v-show="readBackground">
+      <div class="backgroundColor">
+        <span class="colorOne" :class="backType == 1 ? 'colorSelected' : ''" @click="turnBack(1)"></span>
+        <span class="colorTwo" :class="backType == 2 ? 'colorSelected' : ''" @click="turnBack(2)"></span>
+        <span class="colorThree" :class="backType == 3 ? 'colorSelected' : ''" @click="turnBack(3)"></span>
+        <span class="colorFour" :class="backType == 4 ? 'colorSelected' : ''" @click="turnBack(4)"></span>
+        <span class="colorFive" :class="backType == 5 ? 'colorSelected' : ''" @click="turnBack(5)"></span>
+        <span class="colorSix" :class="backType == 6 ? 'colorSelected' : ''" @click="turnBack(6)"></span>
+        <span class="colorSeven" :class="backType == 7 ? 'colorSelected' : ''" @click="turnBack(7)"></span>
+      </div>
+      <div class="font">
+        <div class="fontSize">
+          <p @click="smallerFn" class="smaller">A<sup>-</sup></p>
+          <div class="range"><div id="circular" :style=" 'left:' + left + '%;' " class="circular"></div></div>
+          <p @click="biggerFn" class="bigger">A<sup>+</sup></p>
+        </div>
+        <div @click="showReadFont" class="fontFamily">
+        	<p v-if="this.fontType == 1">默认字体</p>
+          <p v-else >{{fontFamilyName}}</p>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAACXBIWXMAAAsTAAALEwEAmpwYAAADGWlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBA3y7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BUNTVQYqg4jIKAX08EGIIUByaVEZhMXIwMDAIMCgxeDHUMmwiuEBozRjFOM8xqdMhkwNTJeYNZgbme+y2LDMY2VmzWa9yubEtoldhX0mhwBHJycrZzMXM1cbNzf3RB4pnqW8xryH+IL5nvFXCwgJrBZ0E3wk1CisKHxYJF2UV3SrWJw4p/hWiRRJYcmjUhXSutJPZObIhsoJyp2V71HwUeRVvKA0RTlKRUnltepWtUZ1Pw1Zjbea+7QmaqfqWOsK6b7SO6I/36DGMMrI0ljS+LfJPdPDZivM+y0qLBOtfKwtbFRtRexY7L7aP3e47XjB6ZjzXpetruvdVrov9VjkudBrgfdCn8W+y/xW+a8P2Bq4N+hY8PmQW6HPwr5EMEUKRilFG8e4xUbF5cW3JMxO3Jx0Nvl5KlOaXLpNRlRmVdas7D059/KY8tULfAqLi2YXHy55WyZR7lJRWDmv6mz131q9uvj6SQ3HGn83G7Skt85ru94h2Ond1d59uJehz76/bsK+if8nO05pnXpiOu+M4JmzZj2aozW3ZN6+BVwLwxYtXvxxqcOyCcsfrjRe1br65lrddU3rb2402NSx+cFWq21Tt3/Y6btr1R6Oven7jh9QP9h56PURv6Obj4ufqD355LT3mS3nZM+3X/h0Ke7yqasW15bdEL3ZeuvrnfS7N+/7PDjwyPTx6qeKz2a+EHzZ9Zr5Td3bn+9LP3z6VPD53de8b+9+5P/88Lv4z7d/Vf//AwAqvx2K829RWwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAA70lEQVR42mL8z0AZYGIYNWDUACoYwMLAwMAQ38hQR5buqoXtEBfUM1SQrPk/QzFDO8ILnQwFDP9J0p7N0IcaBhMZMok24i9DMsN0zECcyZDA8JcI7X8Y4hjmY4+FRQwxDL8JaP/FEM6wDHc0rmAIY/iFR/sPhiCGdfjTwQaGQIbvOLR/Y/Bj2Eo4IW1j8GX4hkX8M4MHw27iUuJeBneGT2hiHxjcGA4Tn5SPMLgxvEfiv2VwZjhBWl44yeDM8AbKfsngwHCO9Mx0nsGB4QUDA8NTBgeGK+TlxqsMDgxHGewYbuBWwjhaL4wawMDAABgAPRM2bYR/pSAAAAAASUVORK5CYII=">
+        </div>
+      </div>
+    </div>
+    <div class="readFont" v-show="readFont">
+      <div class="system">
+        <a href="javascript:;" @click="turnFont(1)">
+          <p :class="fontType == 1 ? 'fontSelected' : ''">默认字体</p>
+          <img class="selected" src="http://cdn.qcacg.com/img/app_book/selected.png" v-show="fontType == 1"/>
+        </a>
+      </div>
+      <div class="yahei">
+        <a href="javascript:;" @click="turnFont(2)">
+          <p :class="fontType == 2 ? 'fontSelected' : ''">微软雅黑</p>
+          <img class="selected" src="http://cdn.qcacg.com/img/app_book/selected.png" v-show="fontType == 2"/>
+        </a>
+      </div>
+      <div class="song">
+        <a href="javascript:;" @click="turnFont(3)">
+          <p :class="fontType == 3 ? 'fontSelected' : ''">宋体<span style="font-size: 12PX;">(如果手机不具备此字体会到网络中下载4MB)</span></p>
+          <img class="selected" src="http://cdn.qcacg.com/img/app_book/selected.png" v-show="fontType == 3"/>
+        </a>
+      </div>
+      <div class="kai">
+        <a href="javascript:;" @click="turnFont(4)">
+          <p :class="fontType == 4 ? 'fontSelected' : ''">楷体<span style="font-size: 12PX;">(如果手机不具备此字体会到网络中下载4MB)</span></p>
+          <img class="selected" src="http://cdn.qcacg.com/img/app_book/selected.png" v-show="fontType == 4"/>      
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/readApp_cea2190cbd2.js"></script>
+<script>
+	k_touch("readBook", "y");
+</script>
+</html>

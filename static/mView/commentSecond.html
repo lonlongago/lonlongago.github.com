@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>二级评论-QC轻小说</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+  <meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+  <meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+  <link rel="stylesheet" type="text/css" href="../css/main_app_c081deb24e.css"/>
+  <style type="text/css">
+	  
+		body{padding-bottom:.8rem;}
+		[v-cloak]{display:none}
+		.commentSecond .cephalosome span{color: #7E7E7E;}
+		.commentSecond .comment{margin-bottom:.22rem;background-color:#FCFCFC;position:relative}
+		.commentSecond .comment a{display:block;padding-top:.29rem;padding-bottom:.19rem}
+		.commentSecond .comment .userHead{display:inline-block;margin-left:.81rem}
+		.commentSecond .comment .userHead img{width:.5rem;height:.5rem;border-radius:.25rem}
+		.commentSecond .comment .commentContent{display:inline-block;width:5.6rem;margin-left:.15rem;vertical-align:top}
+		.commentSecond .comment .commentContent .userName{margin-top:.07rem;font-size:.24rem;color:#4D4D4D}
+		.commentSecond .comment .commentContent .commentTime{margin-top:.14rem;font-size:.2rem;color:#646363}
+		.commentSecond .comment .commentContent .commentText{font-size:.30rem;line-height:.3rem;min-height:.3rem;color:#646363;margin-top:.23rem;margin-bottom:.57rem}
+		.commentSecond .comment .commentContent .commentText p img {width: 0.4rem;}
+		.commentSecond .comment .commentBottom .lookNums{display:inline-block;margin-left:.76rem}
+		.commentSecond .comment .commentBottom .lookNums img{width:.18rem;height:.12rem;vertical-align:middle}
+		.commentSecond .comment .commentBottom .lookNums p{display:inline-block;font-size:.24rem;color:#9D9D9D;vertical-align:middle}
+		.commentSecond .comment .commentBottom .replyBtn{display:inline-block;position:absolute;right:.48rem;bottom:.15rem}
+		.commentSecond .comment .commentBottom .replyBtn img{width:.22rem;height:.19rem;vertical-align:middle}
+		.commentSecond .comment .commentBottom .replyBtn p{display:inline-block;font-size:.26rem;color:#A7A7A7;vertical-align:middle;margin-top:.03rem}
+		.commentSecond .replyNums{background-color:#FCFCFC;font-size:.24rem;padding-top:.2rem;padding-bottom:.15rem;padding-left:.59rem;color:#727272}
+		.commentSecond .replyList{margin-bottom:.7rem}
+		.commentSecond .replyList li{display:block;background-color:#FCFCFC;margin-bottom:.04rem;position:relative}
+		.commentSecond .replyList li a{display:block;padding-top:.14rem;padding-bottom:.09rem}
+		.commentSecond .replyList li .userHead{display:inline-block;vertical-align:top}
+		.commentSecond .replyList li .userHead img{width:.4rem;height:.4rem;border-radius:.2rem;margin-left:.9rem}
+		.commentSecond .replyList li .replyContent{display:inline-block;margin-left:.16rem;width:5.4rem;color:#727272}
+		.commentSecond .replyList li .replyContent .userName{font-size:.24rem;color:#4B4A4A;margin-top:.12rem}
+		.commentSecond .replyList li .replyContent .replyText{font-size:.28rem;line-height:2;margin-top:.23rem;margin-bottom:.2rem}
+		.commentSecond .replyList li .replyContent .replyText p img{width: 0.4rem;}
+		.commentSecond .replyList li .replyContent .replyText .replyUser{float:left;color:#0086B3;margin-right:.1rem}
+		.commentSecond .replyList li .replyContent .replyTime{font-size:.2rem}
+		.commentSecond .replyList li .replyBtn{display:inline-block;position:absolute;right:.42rem;bottom:.09rem}
+		.commentSecond .replyList li .replyBtn img{width:.22rem;height:.19rem;vertical-align:middle}
+		.commentSecond .replyList li .replyBtn p{display:inline-block;font-size:.24rem;color:#A7A7A7;vertical-align:middle;margin-top:.03rem}
+		.commentSecond .commonBottom{background-color:#FFF;width:100%;position:fixed;bottom:0;z-index:10;border-top:.01rem solid #F3F3F3}
+		.commentSecond .commonBottom ul{font-size:0;padding-top:.15rem;padding-bottom:.13rem;text-align:center;overflow:hidden}
+		.commentSecond .commonBottom ul li{display:inline-block;font-size:.2rem;margin:0 .78rem;text-align:center}
+		.commentSecond .commonBottom ul .book img{width:.19rem;height:.21rem}
+		.commentSecond .commonBottom ul .bookshelf img{width:.24rem;height:.2rem}
+		.commentSecond .commonBottom ul .message img{width:.28rem;height:.23rem}
+		.commentSecond .commonBottom ul .personal img{width:.23rem;height:.23rem}
+		.commentSecond .commonBottom ul li p{margin-top:.05rem;color:#999}
+		
+  </style>
+</head>
+<body id="commentSecond">
+	<div id="pull"></div>
+	<div class="commentSecond" v-cloak>
+        <div class="blackWrap" style="display: none;" v-show="toWrap" @click="showMenu"></div>
+		    <div class="cephalosome">
+		      <img @click="back" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+		      <span>评论</span>
+		      <a href="./search.html"><img class="searchSec" src="http://cdn.qcacg.com/img/app_index/classification_05.png" alt="" /></a>
+		      <img class="catalog" @click="showMenu" src="http://cdn.qcacg.com/img/app_index/classification_07.png" alt="" />
+		      <div class="commonHeadMenu" style="display: none;" v-show="menuList">
+		          <a href="./index.html" class="home">
+		              <img src="http://cdn.qcacg.com/img/app_book/home.png"/>
+		              <p>首页</p>
+		          </a>
+		          <a href="./classFirst.html" class="list">
+		              <img src="http://cdn.qcacg.com/img/app_book/list.png"/>
+		              <p>分类</p>
+		          </a>
+		          <a href="./rank.html" class="sort">
+		              <img src="http://cdn.qcacg.com/img/app_book/cup.png"/>
+		              <p>排行榜</p>
+		          </a>
+		          <a href="./personal.html" class="personal">
+		              <img src="http://cdn.qcacg.com/img/app_book/personal.png"/>
+		              <p>个人中心</p>
+		          </a>
+		      </div>
+		    </div>
+        
+      <div class="comment">
+    	    <a :href="'./reply.html?commentId=' + replyData.commentId + '&userId=' + replyUserId + '&status=0'">
+	    		<div class="userHead">
+	    		    <img :src="comment.userHead ? path.imagePath + comment.userHead : 'http://cdn.qcacg.com/img/app_book/userHead.png'"/>
+	    		</div>
+	    		<div class="commentContent">
+	    		    <div class="userName">
+	    		        <p v-cloak>{{comment.userName}}</p>
+	    		    </div>
+	    		    <div class="commentTime">
+	    		        <p v-cloak>{{comment.commentDate | commentTime}}</p>
+	    		    </div>
+	    		    <div class="commentText">
+	    		        <p v-cloak>{{{comment.commentContent | resetFont}}}</p>
+	    		    </div>
+	    		</div>
+	    		<div class="commentBottom">
+                    <div class="lookNums">
+                        <img src="http://cdn.qcacg.com/img/app_comment/eye.png"/>
+                        <p v-cloak>{{replyTotal}}</p>
+                    </div>
+                    <div class="replyBtn">
+                        <img src="http://cdn.qcacg.com/img/app_comment/reply.png"/>
+                        <p>回复</p>
+                    </div>
+                </div>
+    	    </a>
+    	</div>
+    	<div class="replyNums" v-cloak>
+    	          共 &nbsp; {{replyTotal}} &nbsp; 条
+    	</div>
+        <ul class="replyList">
+            <li v-for="reply in replyList" v-cloak>
+                <a :href="'./reply.html?commentId=' + replyData.commentId + '&userId=' + reply.userId + '&status=1'">
+                    <div class="userHead">
+                        <img :src="reply.userHead ? path.imagePath + reply.userHead : 'http://cdn.qcacg.com/img/app_book/userHead.png'"/>
+                    </div>
+                    <div class="replyContent">
+                        <div class="userName">
+                            <p>{{reply.userName}}</p>
+                        </div>
+                        <div class="replyText">
+                            <p><span class="replyUser" v-show="replyUserId != reply.replyUserId">@{{reply.replyUserName}}</span>{{{reply.replyContent | resetFont}}}</p>
+                        </div>
+                        <div class="replyTime">
+                            <p>{{reply.replyDate | commentTime}}</p>
+                        </div>
+                    </div>
+                    <div class="replyBtn">
+                        <img src="http://cdn.qcacg.com/img/app_comment/reply.png"/>
+                        <p>回复</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <appBottom></appBottom>
+    </div>
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/commentSecondApp_32febcb979.js"></script>
+<script>
+	k_touch("commentSecond", "y");
+</script>
+</html>

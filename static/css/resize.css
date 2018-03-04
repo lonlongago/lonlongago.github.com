@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*css reset*/
+*{-webkit-tap-highlight-color:transparent;}
+body{ min-width:320px;font-family:"\5FAE\8F6F\96C5\9ED1", Helvetica;font-size:12px; color:#606060; -webkit-text-size-adjust: none;-webkit-user-select: none; background:#fff;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+ul,ol,li{list-style:none}
+a,a:visited,a:hover{text-decoration:none;color:#606060}
+a:active{color:#333;}
+img{vertical-align:middle;border:0;}
+button,input,select,textarea{vertical-align:middle;outline:none;resize:none;font-family:"\5FAE\8F6F\96C5\9ED1", Helvetica;vertical-align:middle;outline:none;-webkit-appearance:none;}
+table{border-collapse:collapse;border-spacing:0}
+i,em{font-style:normal;}

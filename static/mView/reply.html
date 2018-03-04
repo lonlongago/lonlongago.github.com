@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>回复-QC轻小说</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+  <meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+  <meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+  <link rel="stylesheet" type="text/css" href="../css/main_app_c081deb24e.css"/>
+  <style type="text/css">
+  
+		body{padding-bottom:.8rem;}
+		.replyWrap .reply{background-color:#FCFCFC;padding:.26rem 0}
+		.replyWrap .reply .replyContent{display:block;width:6rem;height:3rem;margin:0 auto;font-size:.32rem;resize:none;border:none;border-radius:0;-webkit-appearance:none;-webkit-user-select:auto}
+		.replyWrap .reply .replyBtn{display:block;width:5.92rem;margin:0 auto;margin-top:.29rem;padding:.08rem 0;background-color:#5BD0F5;border-radius:.06rem;font-size:.30rem;color:#FFF;text-align:center}
+		.replyWrap .blackWrap{background-color:#000;opacity:.4;width:100%;height:100%;position:fixed;left:0;top:0;z-index:10}
+  </style>
+</head>
+<body id="replyWrap" v-show="displayFlag" >
+  <div class="replyWrap">
+    <div class="blackWrap" style="display: none;" v-show="toWrap" @click="showMenu"></div>
+    <div class="cephalosome">
+      <img @click="back" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+      <span>分类</span>
+      <a href="./search.html"><img class="searchSec" src="http://cdn.qcacg.com/img/app_index/classification_05.png" alt="" /></a>
+      <img class="catalog" @click="showMenu" src="http://cdn.qcacg.com/img/app_index/classification_07.png" alt="" />
+      <div class="commonHeadMenu" style="display: none;" v-show="menuList">
+          <a href="./index.html" class="home">
+              <img src="http://cdn.qcacg.com/img/app_book/home.png"/>
+              <p>首页</p>
+          </a>
+          <a href="./classFirst.html" class="list">
+              <img src="http://cdn.qcacg.com/img/app_book/list.png"/>
+              <p>分类</p>
+          </a>
+          <a href="./rank.html" class="sort">
+              <img src="http://cdn.qcacg.com/img/app_book/cup.png"/>
+              <p>排行榜</p>
+          </a>
+          <a href="./personal.html" class="personal">
+              <img src="http://cdn.qcacg.com/img/app_book/personal.png"/>
+              <p>个人中心</p>
+          </a>
+      </div>
+    </div>
+    
+    
+    <div class="reply">
+      <textarea class="replyContent" v-model="content"></textarea>
+      <div class="replyBtn" @click="send">回复</div>
+    </div>
+    <appBottom></appBottom>
+  </div>
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/replyApp_72898eab41.js"></script>
+<script>
+      k_touch("replyWrap", "y");
+</script>
+</html>

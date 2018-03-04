@@ -1,0 +1,301 @@
+<template>
+	<div v-show="displayFlag" style="display: none;" id="password" class="password">
+		<script src="/lib/resize.js"></script>
+		<script src="/lib/pullToRefresh.js"></script>
+		<div id="pull"></div>
+		<div v-if="ifFlag == 2"  class="content">
+		    <myheader msg="修改密码"></myheader>
+		    <div class="up">
+		      <ul class="order">
+		        <li class="word wordSec"><span class="sequence">1</span>修改密码</li>
+		        <li class="word "><span class="sequence">2</span>身份验证</li>
+		      </ul>
+		      <div class="hr"></div>
+		    </div>
+		    <div class="middle">
+		      <img src="http://cdn.qcacg.com/img/app_index/modify_01.png" alt="" />
+		      <p>为了您的账号安全，需要验证您的手机号</p>
+		      <p>{{telphone}}</p>
+		    </div>
+		    <div class="lower">
+		      <input type="" name="" id="" placeholder="请输入验证码" v-model="telephoneCode" />
+		      <div v-if="verificationBtnFlag" v-else class="vertifyPic" @click="getVertifyPic">获取验证码</div>
+		      <div v-else class="verifyBtn">重新获取验证码{{verificationBtnTime}}</div>
+		    </div>
+		    <div class="fix" v-if="popup"></div>
+		     <div class="popupBox"  v-if="popup">
+		      <div class="popup">
+		        <img src="http://cdn.qcacg.com/img/app_index/shut.png" class="quit" @click="quit">
+		        <div class="window">
+		          <input type="text" placeholder="请输入验证码" v-model="picCode"/>
+		          <img class="vertifyPic vertifyPicImg" alt="验证码" :src="vertifyPic" @click="showCaptchaObj"/>
+		        </div> 
+		        <span v-if="errFlag" class="err">*验证码错误</span>
+		        <div class="vertifyTrue" @click="getVertifyMessage">确定</div>
+		      </div>
+		    </div>
+		    <span v-if="mesFlag" class="err">*验证码错误</span>
+		    <div @click="vertifyTrue" class="true">完成</div>
+		
+		</div> 
+		  <!--密码2-->
+	   <div v-if="ifFlag == 1" class="content">
+	    <div class="cephalosome">
+	      <img @click="backFn" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+	      <span>修改密码</span>
+	    </div> 
+	    <div class="up">
+	      <ul class="order">
+	        <li class="word "><span class="sequence">1</span>修改密码</li>
+	        <li class="word wordSec"><span class="sequence">2</span>身份验证</li>
+	      </ul>
+	      <div class="hr"></div>
+	    </div>
+	    <div class="lowerSec">
+	      <div class="title">
+	        <span class="new">新密码</span>
+	        <input type="password" name="" id="" placeholder="请输入新密码(6-16个字符组成，区分大小写，不能包含空格)" v-model="passWord" />
+	      </div>
+	      <div class="title">
+	        <span class="new">确认新密码</span>
+	        <input type="password" name="" id="" placeholder="再次确认新密码" v-model="passWordConfirm" />
+	      </div>
+	    </div>
+	    <span v-if=" codeFlag == 1 " class="flag"  >*两次密码输入不一致</span>
+	   <!-- <span v-if=" codeFlag == 4 " class="flag"  >*密码长度在6-16位之间</span>-->
+	    <div @click="passwordFn()" class="true">下一步</div>
+	  
+	</div>
+	<appBottom></appBottom>
+	</div>
+</template>
+
+<script>
+import Header from '~/components/Headerapt'
+import PathList from '~/components/conf'
+import appPathList from '~/components/conf-app'
+import SZXJ from "~/components/vueHttp"
+import Alert from '~/components/Alert'
+import axios from 'axios'
+import Footer from '~/components/Footer'
+// this.$refs.alert.setMessage(false,'message',function(){})
+export default {
+	components:{
+		'alert': Alert,
+		'appPathList':appPathList,
+		'myheader':Header
+//		'myfooter':Footer
+	},
+	asyncData:function(){
+		return {}
+	},
+	data : function() {
+		return {
+			displayFlag:false,
+		    path: appPathList,
+		    szxj:SZXJ,
+		    telphone:'',
+		    uuid:'',
+		    vertifyPic:'',
+		    checkCode:'',
+		    menuList: false,
+		    toWrap: false,
+		    errFlag:false,
+		    passWord:'',
+		    passWordConfirm:'',
+		    uuid:'',
+		    telephoneCode:'',
+		    codeFlag:'',
+		    menuList: false,
+		    toWrap: false,
+		    ifFlag:1,
+		    verificationBtnTime:60,
+		    verificationBtnFlag:true,
+		    popup:false,
+		    mesFlag:false,
+		}
+	},
+    mounted: function () { // ready -->
+	  this.$nextTick(function () {
+	  	this.getValueFn();
+	    this.vertifyPic =  appPathList.code + '?time=' + new Date();
+	    this.displayFlag = true;
+    	k_touch("password", "y");
+	  })
+	},
+	methods: {
+	    getVertifyMessage:function(){
+	      var data = {
+	        checkCode :this.picCode,
+	      };
+	      SZXJ.http(this,'post', appPathList.mobileTelephoneCode, data, (response) => {
+	        this.uuid = response.data.data;
+	        this.popup=false;
+	        this.picCode = '';
+	        this.verificationTimeFn();
+	      },(err) =>{
+	        this.errFlag = true;
+	        this.picCode = '';
+	      });
+	    },   
+	    getVertifyPic:function(){
+	      this.popup=true;
+	      this.errFlag = false;
+	    },
+	    quit:function(){
+	      this.popup=false;
+	    },
+	    verificationTimeFn: function() {
+	          if (this.verificationBtnTime === 0) {
+	            this.verificationBtnTime= 60;
+	            this.verificationBtnFlag = true;
+	            return;
+	          } else {
+	            this.verificationBtnFlag = false;
+	            this.verificationBtnTime= --this.verificationBtnTime;
+	            var This = this;
+	            setTimeout(function(){
+	              This.verificationTimeFn();
+	            }, 1000);
+	          }
+	        },
+	    passwordFn:function(){
+	    	if(0<this.passWord.length&&0<this.passWordConfirm.length){
+			    		if(this.passWord == this.passWordConfirm ){
+				         this.ifFlag = 2;
+				       }else{
+				        
+				         this.codeFlag = 1;
+				       }
+	    	}
+	    	else{
+	    		this.codeFlag = 0;		
+	    	}
+	    },
+	    showMenu: function() {
+	            this.menuList = !this.menuList
+	            this.toWrap = !this.toWrap;
+	            if(this.menuList){
+	                document.body.style.overflow = "hidden";
+	            }else{
+	                document.body.style.overflow = "auto";
+	            };
+	        },
+	    backFn:function(){
+	      history.go(-1);
+	    },
+	    showCaptchaObj:function(){
+	      this.vertifyPic =  appPathList.code + '?time=' + new Date();
+	    },
+	    vertifyTrue:function(){
+	      var _data = {
+	        telephoneCode: this.telephoneCode,
+	        uuid: this.uuid,
+	        passWord : this.passWord,
+	        passWordConfirm : this.passWordConfirm,
+	      };
+	      SZXJ.http(this,'post', appPathList.updatePassword, _data, (response) => {
+	          location.href = this.path.TemprootPath + '/app/personal';
+	         },(err) => {
+	           this.mesFlag = true;
+	         });
+	    },
+	    getValueFn:function(){
+	      SZXJ.http(this,'get', appPathList.getStatus, {}, (response) => {
+	        this.telphone = response.data.status.telphone;
+	      });
+	      this.$nextTick(function(){
+		       this.displayFlag = true;
+		       var  This = this;
+		       setTimeout(function(){
+		          document.body.removeChild(document.getElementById("loading"));
+		       },300)
+		    });
+	    },
+	},
+  	head: function(){
+  		return {
+  			title: '修改密码-QC轻小说',
+  	    meta: [
+  			    { charset: 'UTF-8' },
+  			    { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no' },
+  			  	{ name: 'format-detection', content: 'telephone=no' },
+  			  	{ name: 'apple-touch-fullscreen', content: 'yes' },
+  			  	{ name: 'apple-mobile-web-app-capable', content: 'yes' },
+  			  	{ name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+  			  	{ name: 'keywords', content: 'QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿' },
+  			  	{ name: 'description', content: 'QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ' },
+  			  	{ name: 'baidu_union_verify', content: '1dbb2d68c26ba734e502097619803d73' }
+  			],
+  			link: [
+  	  		]
+  	  }
+  	}
+}
+</script>
+
+<style>
+		
+	/*@font-face{font-family:sansSerif;src:url('../font/app-font/Microsoft Sans Serif.eot');src:url('../font/app-font/Microsoft Sans Serif.eot?#iefix') format('embedded-opentype'),url('../font/app-font/Microsoft Sans Serif.woff') format('woff'),url('../font/app-font/Microsoft Sans Serif.woff2') format('woff'),url('../font/app-font/Microsoft Sans Serif.ttf') format('truetype'),url('../font/app-font/Microsoft Sans Serif.svg#YourWebFontName') format('svg')}*/
+	*{margin:0;padding:0;font-family:sansSerif;list-style:none;text-decoration:none;border:0;color:#000;line-height: 1.1;}
+	input{height:.4rem;line-height:1.5}
+	a:visited{color:#000}
+	body{padding-bottom:.8rem;background-color:#f4f4f4}
+	.password .content{margin:0 auto;position:relative;min-height:12rem}
+	.password .content .cephalosome{position:relative;background-color:#fff;z-index:10;box-shadow:0 .03rem .05rem #ECECEC;box-shadow:0 .03rem .05rem rgba(0,0,0,.055)}
+	.password .content .cephalosome span{box-sizing:border-box;padding:.32rem 0;font-size:.32rem;line-height:.16rem;height:.8rem;margin:0 auto;display:block;text-align:center;}
+	.password .content .cephalosome .back{position: absolute;left: 7%;height: .8rem;padding: .25rem 0;box-sizing: border-box;}
+	.password .content .cephalosome .searchSec{position:absolute;right:16%;top:.31rem;width:.28rem;height:.3rem}
+	.password .content .cephalosome .catalog{position:absolute;right:7%;top:.325rem;width:.3rem;height:.3rem}
+	.password .content .up{margin:5% 0;position:relative}
+	.password .content .up .word .sequence{display:inline-block;border:.011rem solid #6ebce6;border-radius:100rem;color:#6ebce6;text-align:center;margin-right:5%;padding:1% 5%}
+	.password .content .up .order{overflow:hidden;width:100%;z-index:999}
+	.password .content .up .order li{float:left}
+	.password .content .up .order .word{background-color:#f4f4f4;margin-left:15%;width:2rem;text-align:center;color:#6ebce6;font-size:.28rem;z-index:99999}
+	.password .content .up .order .wordSec{color:silver;z-index:99999}
+	.password .content .up .order .wordSec .sequence{color:silver;display:inline-block;border:1px solid silver;border-radius:100rem;text-align:center;margin-right:5%;padding:1% 5%}
+	.password .content .up .hr{background-color:silver;height:1px;position:absolute;top:55%;width:100%;z-index:-99}
+	.password .content .middle img{width:1rem;height:1.25rem;margin:0 auto;display:block;margin-bottom:1%}
+	.password .content .middle p{text-align:center;font-size:.28rem;color:rgba(0,0,0,.65)}
+	.password .content .lower{margin-top:4%;background-color:#fff;padding:1.5% 3% 1.5% 15%;overflow:hidden;font-size:.28rem}
+	.password .content .lower input{font-size:.28rem;height:.3rem;padding-left:.15rem;width:2rem;margin-right:2rem}
+	.password .content .lower .obtain{background-color:#6ebce6;text-align:center;padding:.5% 1.5%;border-radius:100rem;display:inline-block;float:right;margin-right:3%;color:#fff;font-size:.24rem}
+	.password .content .true{padding:1% 1.5%;background-color:#3fd2e8;text-align:center;margin:5% 28% 0 28%;border-radius:5rem;color:#fff;font-size:.24rem}
+	.password .vertifyPic{border-radius:1rem;cursor:pointer;height:.3rem;display: inline-block;background-color: #2BBBE4;color: white;padding: 0 2%;}
+	.password .verifyBtn{border-radius:1rem;cursor:pointer;display: inline-block;background-color: #8C8C8C;vertical-align:top;color: white;padding: 1% 2%;font-size: 0.16rem;}
+	.password .err{color:#EE7271;font-size:.16rem;position:absolute;left:15%;margin-top:1%}
+	.password .vertifyPicImg{padding: 0;}
+	/*密码2*/
+    .password .content{margin:0 auto;position:relative;min-height:12rem}
+    .password .content .cephalosome{position:relative;background-color:#fff;z-index:10;box-shadow:0 .03rem .05rem #ECECEC;box-shadow:0 .03rem .05rem rgba(0,0,0,.055)}
+    .password .content .cephalosome span{box-sizing:border-box;padding:.32rem 0;font-size:.32rem;line-height:.16rem;height:.8rem;margin:0 auto;display:block;text-align:center;}
+    .password .content .cephalosome .back{position: absolute;left: 7%;height: .8rem;padding: .25rem 0;box-sizing: border-box;}
+    .password .content .cephalosome .searchSec{position:absolute;right:16%;top:.31rem;width:.3rem;height:.3rem}
+    .password .content .cephalosome .catalog{position:absolute;right:10%;top:.325rem;width:.3rem;height:.3rem}
+    .password .content .up{margin:5% 0;position:relative}
+    .password .content .up .word .sequence{display:inline-block;border:1px solid #6ebce6;border-radius:100rem;color:#6ebce6;text-align:center;margin-right:5%;padding:1% 5%}
+    .password .content .up .order{overflow:hidden;width:100%;z-index:999}
+    .password .content .up .order li{float:left}
+    .password .content .up .order .word{background-color:#f4f4f4;margin-left:15%;width:2rem;text-align:center;color:#6ebce6;font-size:.28rem;z-index:99999}
+    .password .content .up .order .wordSec{color:silver;z-index:99999}
+    .password .content .up .order .wordSec .sequence{color:silver;display:inline-block;border:1px solid silver;border-radius:100rem;text-align:center;margin-right:5%;padding:1% 5%}
+    .password .content .up .hr{background-color:silver;height:1px;position:absolute;top:55%;width:100%;z-index:-99}
+    .password .content .lowerSec{margin-top:5%;background-color:#fff;overflow:hidden;border-top:1px solid rgba(0,0,0,.035);border-bottom:1px solid rgba(0,0,0,.035)}
+    .password .content .lowerSec .title{padding:2.5% 0;border-bottom:1px solid rgba(0,0,0,.035);line-height:1.5}
+    .password .content .lowerSec .title input{font-size:.28rem;width:60%}
+    .password .content .lowerSec .titleSec{border:none}
+    .password .content .lowerSec .title .new{width:25%;border-right:1px solid #e0e0e0;text-align:right;margin-right:3%;display:inline-block;padding-right:3%;font-size:.28rem;color:rgba(0,0,0,.7)}
+    .password .content .true{padding:1% 1.5%;background-color:#3fd2e8;text-align:center;margin:5% 28% 0 28%;border-radius:5rem;color:#fff;font-size:.28rem}
+    .password .content .flag{display:inline-block;margin-top:1%;margin-left:15%;color:#EC6D73}
+    .password .popupBox{width:6rem;height:2rem;margin:0 auto;border-radius:.1rem;background-color:#FFF;position:fixed;top:30%;left:50%;margin-left:-3rem;z-index:20;}
+    .password .popupBox .popup{position:relative;widows:100%;height:100%}
+    .password .popupBox .popup .window{padding-top:10%}
+    .password .popupBox .popup .err{color:#EE7271;font-size:.16rem;position:absolute;left:10%;top:55%}
+    .password .popupBox .quit{width:.24rem;height:.24rem;cursor:pointer;position:absolute;right:.1rem;top:.1rem}
+    .password .popupBox input{width:3.05rem;height:.4rem;font-size:.24rem;padding-left:.19rem;background-color:#E3E3E3;border-radius:.03rem;border:none;-webkit-appearance:none;vertical-align:middle;margin:0 .5rem}
+    .password .popupBox .vertifyPic{height:.4rem;border-radius:.01rem;cursor:pointer;vertical-align:middle}
+    .password .popupBox .vertifyTrue{padding:1% 1.5%;background-color:#3fd2e8;text-align:center;margin:7% 28% 0 28%;border-radius:5rem;color:#fff;font-size:.28rem}
+    .password .wrap{width:100%;height:12rem;background-color:#000;opacity:.4;position:absolute;top:0;left:0;z-index:15}
+    .password .blackWrap{background-color:#000;opacity:.4;width:100%;height:100%;position:fixed;left:0;top:0;z-index:10}
+    .password .fix{width: 100%;height: 100%;position: fixed;z-index: 11;background-color: rgba(0,0,0,0.35);top: 0;}
+</style>

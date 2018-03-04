@@ -1,0 +1,80 @@
+/*
+ * 公共部分样式
+ * */
+/*===样式重置===*/
+@font-face{
+	font-family:sansSerif;
+	src:url('../font/app-font/Microsoft Sans Serif.eot');
+	src:url('../font/app-font/Microsoft Sans Serif.eot?#iefix') format('embedded-opentype'),
+	url('../font/app-font/Microsoft Sans Serif.woff') format('woff'),
+	url('../font/app-font/Microsoft Sans Serif.woff2') format('woff'),
+	url('../font/app-font/Microsoft Sans Serif.ttf') format('truetype'),
+	url('../font/app-font/Microsoft Sans Serif.svg#YourWebFontName') format('svg');
+}
+@font-face {
+  font-family: "方正黑体简体";
+  src: url("../font/方正黑体简体/方正黑体简体.woff2") format("woff2"),
+       url("../font/方正黑体简体/方正黑体简体.woff") format("woff"),
+       url("../font/方正黑体简体/方正黑体简体.ttf") format("truetype"),
+       url("../font/方正黑体简体/方正黑体简体.eot") format("embedded-opentype"),
+       url("../font/方正黑体简体/方正黑体简体.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Song_Ti";
+  src: url("../font/Song_Ti/Song_Ti.woff2") format("woff2"),
+       url("../font/Song_Ti/Song_Ti.woff") format("woff"),
+       url("../font/Song_Ti/Song_Ti.ttf") format("truetype"),
+       url("../font/Song_Ti/Song_Ti.eot") format("embedded-opentype"),
+       url("../font/Song_Ti/Song_Ti.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kai_Ti";
+  src: url("../font/Kai_Ti/Kai_Ti.woff2") format("woff2"),
+       url("../font/Kai_Ti/Kai_Ti.woff") format("woff"),
+       url("../font/Kai_Ti/Kai_Ti.ttf") format("truetype"),
+       url("../font/Kai_Ti/Kai_Ti.eot") format("embedded-opentype"),
+       url("../font/Kai_Ti/Kai_Ti.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+*{margin:0;padding:0;font-family:sansSerif;list-style:none;outline: none;color:#000;text-decoration:none;line-height: 1;}
+a:visited{color:#000}
+input {-webkit-user-select:text!important}
+i{font-style: normal;}
+.none {display: none;}
+.showB {display: block;}
+.showL {display: inline-block;}
+.pl{float: left;}
+.pr{float: right;}
+.btn{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none;user-select:none}
+.btn:hover{outline:0;cursor:pointer}
+.btn:focus{outline:0;cursor:pointer}
+.btn:active{-webkit-box-shadow:inset 0 0 5px rgba(0,0,0,.7);box-shadow:inset 0 0 5px rgba(0,0,0,.7)}
+.relative {position: relative;}
+.clear:after{display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden;}
+/*===头部样式===*/
+.cephalosome {position:fixed;height:.8rem;width:7.5rem;top:0px;z-index:11;background-color:#fff;box-shadow:0 5px 8px #ececec;text-align: center;}
+.cephalosome span{font-size:0.3rem;margin:0 auto;display:block;text-align:center;height:.8rem;padding-top: 0.25rem;padding-bottom:0.25rem;box-sizing:border-box}
+.cephalosome .back{position:absolute;left:7%;height:.8rem;padding:0.25rem 0;box-sizing:border-box}
+.cephalosome .searchSec{position:absolute;right:7%;top:0;height:.8rem;margin-right: 35px;padding:0.25rem 0;box-sizing:border-box}
+.cephalosome .catalog{position:absolute;right:7%;top:0;height:.8rem;padding:0.25rem 0;box-sizing:border-box}
+
+.blackWrap{background-color:#000;opacity:.4;width:100%;height:100%;position:fixed;left:0;top:0;z-index:10}
+.cephalosome .commonHeadMenu{font-size: 0;text-align:center;padding-top:15px;padding-bottom:20px;width:100%;background-color:#FFF;position:absolute;top:.8rem;z-index:11;border-top: 1px solid silver;}
+.cephalosome .commonHeadMenu a{display:inline-block;width: 23%;}
+.cephalosome .commonHeadMenu a img{display:inline-block;width: 0.35rem;height:0.35rem;margin:0 auto}
+.cephalosome .commonHeadMenu a p{margin-top: 8px;font-size: 0.22rem;color:#232323}
+/*===个人中心另一种样式的===*/
+.cephalosome .header{height:.8rem;text-align:center;}
+.cephalosome .header span{color: #FFFFFF;}
+.cephalosome .info{position:absolute;right:7%;top:0;height:.8rem;padding:0.25rem 0;box-sizing:border-box}
+/*===我的书架页面的===*/
+.cephalosome .title{margin:0 auto;text-align:center;display: inline-block;}
+.cephalosome .title .record{height:0.55rem;font-size:0.24rem;line-height:0.55rem;margin: 0.1rem 0;box-sizing:border-box;color:#00A1D6;display:block;width:.75rem;float:left;border-radius:4px}
+.cephalosome .title .shelf{height:0.55rem;font-size:0.24rem;line-height:0.55rem;margin: 0.1rem 0;box-sizing:border-box;color:#fff;display:block;width:.75rem;float:left;background-color:#1CC8ED;border-radius:4px}
+		
+/*===底部样式===*/

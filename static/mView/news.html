@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+  <meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+  <meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+  <title>消息-QC轻小说</title>
+  <link rel="stylesheet" href="../css/main_app_c081deb24e.css" />
+  <style>
+		body{padding-bottom:.8rem;background-color:#f4f4f4}
+		.news .content{margin:0 auto}
+		.news .content .main{border-bottom:1px solid rgba(0,0,0,.055);background-color:#fff;padding:3.5% 0}
+		.news .content .main img{width:.6rem;height:.6rem;margin-left:10%;margin-right:3%;vertical-align:middle}
+		.news .content .main .right{display:inline-block;vertical-align:middle}
+		.news .content .main .right .title{font-size:.28rem;position:relative}
+		.news .content .main .right .title .red{
+			background-color: #EA5464;
+	    color: #fff;
+	    padding: .05rem .10rem;
+	    border-radius: 1rem;
+	    display: inline-block;
+	    text-align: center;
+	    font-size: .2rem;
+	    position: absolute;
+	    right: .25rem;
+	    top: -.05rem;
+		}
+		.news .content .main .right .message{font-size:.24rem;color:#777;padding-top:5%}
+	</style>
+</head>
+<body v-show="displayFlag" style="display: none;" id="news" class="news">
+	<div id="pull"></div>
+  <div class="content">
+    <div class="blackWrap" style="display: none;" v-show="toWrap" @click="showMenu"></div>
+    <div class="cephalosome">
+      <img @click="backFn" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+      <span>消息</span>
+      <a href="./search.html"><img class="searchSec" src="http://cdn.qcacg.com/img/app_index/classification_05.png" alt="" /></a>
+      <img class="catalog" @click="showMenu" src="http://cdn.qcacg.com/img/app_index/classification_07.png" alt="" />
+        <div class="commonHeadMenu" style="display: none;" v-show="menuList">
+          <a href="./index.html" class="home">
+            <img src="http://cdn.qcacg.com/img/app_book/home.png"/>
+            <p>首页</p>
+          </a>
+          <a href="./classFirst.html" class="list">
+            <img src="http://cdn.qcacg.com/img/app_book/list.png"/>
+            <p>分类</p>
+          </a>
+          <a href="./rank.html" class="sort">
+            <img src="http://cdn.qcacg.com/img/app_book/cup.png"/>
+            <p>排行榜</p>
+          </a>
+          <a href="./personal.html" class="personal">
+            <img src="http://cdn.qcacg.com/img/app_book/personal.png"/>
+            <p>个人中心</p>
+          </a>
+        </div>
+    </div> 
+    <a href="message.html" @click="unReadreplyFn()">
+      <div class="main">
+        <img src="http://cdn.qcacg.com/img/app_index/news_03.png" alt="" />
+          <ul class="right">
+            <li class="title">回复   <span v-if="unread.reply > 0" class="red">{{unread.reply}}</span></li>
+            <li class="message">暂无回复消息</li>
+          </ul>
+      </div>
+    </a>
+    <div class="main">
+      <img src="http://cdn.qcacg.com/img/app_index/news_06.png" alt="" />
+        <ul class="right" >
+          <li class="title">@消息</li>
+          <li class="message">此功能暂未开放</li>
+        </ul>
+    </div>
+    <a href="relevant.html" @click="unReadbookFn()">
+      <div class="main">
+        <img src="http://cdn.qcacg.com/img/app_index/news_08.png" alt="" />
+          <ul class="right">
+            <li class="title">作品相关消息 <span v-if="unread.book > 0" class="red">{{unread.book}}</span></li>
+            <li class="message">暂无作品相关消息</li>
+          </ul>
+      </div>
+    </a>
+    <a href="Official.html" @click="unReadofficialFn()">
+      <div class="main">
+        <img src="http://cdn.qcacg.com/img/app_index/news_10.png" alt="" />
+          <ul class="right">
+            <li class="title">官方消息 <span v-if="unread.official > 0" class="red">{{unread.official}}</span></li>
+            <li class="message">暂无官方消息</li>
+          </ul>
+      </div>
+    </a>
+    <a href="system.html" @click="unReadsystemFn()">
+      <div class="main">
+        <img src="http://cdn.qcacg.com/img/app_index/news_12.png" alt="" />
+          <ul class="right">
+            <li class="title">系统消息 <span v-if="unread.system > 0" class="red">{{unread.system}}</span></li>
+            <li class="message">暂无系统消息</li>
+          </ul>
+      </div>
+    </a>
+    <!--<div class="main">
+      <img src="http://cdn.qcacg.com/img/app_index/news_14.png" alt="" />
+        <ul class="right">
+          <li class="title">约稿</li>
+          <li class="message">暂无约稿消息</li>
+        </ul>
+    </div>-->
+    <appBottom></appBottom>
+  </div>      
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/newsApp_ddb09f1001.js"></script>
+<script>
+	k_touch("news", "y");
+</script>
+</html>

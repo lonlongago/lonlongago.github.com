@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>登录-QC轻小说</title>
+	<meta name="apple-touch-fullscreen" content="yes">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+  <meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+  <meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+  <link rel="stylesheet" type="text/css" href="../css/main_app_c081deb24e.css" />
+  <style type="text/css">
+   	body{background-color:#f4f4f4;padding-bottom:.8rem;}
+		.login {max-width: 750px;overflow-x: hidden;margin:0 auto}
+		.login .logo{text-align:center;margin-top:20%;margin-bottom:.26rem}
+		.login .logo img{height:.72rem}
+		.login .loginInfo{width:75%;margin:0 auto;font-size:.24rem;position:relative;}
+		.login .loginInfo input{box-sizing: border-box;background-color:#E3E3E3;margin-bottom:.3rem;padding-left:.6rem;font-size:.32rem;width:100%;height:.9rem;line-height: .36rem;padding-top: .04rem;border-radius:.03rem;border:none;-webkit-appearance:none}
+		
+		.login .loginInfo .userImg{position:absolute;top:1.49rem;left:3%;height:.28rem}
+		.login .loginInfo .passwordImg{position:absolute;top:.3rem;left:3%;height:.28rem}
+		.login .loginInfo .password{background-size:.19rem .22rem;background-position:.16rem .09rem}
+		.login .loginInfo .verify{width:100%;margin:0 auto;margin-bottom:.3rem}
+		.login .loginInfo .verify input{width:4rem;padding-left:.19rem;margin-bottom:0}
+		.login .loginInfo .verify .vertifyPic{display:inline-block;float:right;width:1.33rem;height:.9rem;border-radius:.01rem}
+		.login .submit {
+			display: block;
+	    width: 4.8rem;
+	    margin: 0 auto;
+	    padding-top: .17rem;
+	    padding-bottom: .13rem;
+	    color: #FFF;
+	    background-color: #3fd2e8;
+	    border-radius: 100rem;
+	    text-align: center;
+	    position: relative;
+	    margin-top: .30rem;
+	    font-size: 0.32rem;
+		}
+		.login .submit p{ color: #FFFFFF;}
+		.login .loginBottom{
+			width: 75%;
+	    font-size: .24rem;
+	    margin: 20px auto;
+	    text-align: end;
+    }
+		.login .loginBottom a{color:#B1B1B1}
+		.login .loginBottom .forget{display:inline-block}
+		.login .loginBottom .register{float:right}
+		.login .blackWrap{background-color:#000;opacity:.4;width:100%;height:100%;position:fixed;left:0;top:0;z-index:10}
+		.login .wrong{
+			margin-top: -.16rem;
+			padding-bottom: .16rem;
+	    margin-left: .2rem;
+	    padding-top: .05rem;
+	    font-size: .32rem;
+	    color: #EE7271;
+    }
+  </style>
+</head>
+<body>
+  <div class="login" v-show="displayFlag" id="login">
+    <div class="blackWrap" style="display: none;" v-show="toWrap" @click="showMenu"></div>
+    <div class="cephalosome">
+      <img @click="back" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+      <span>登录</span>
+      <a href="./search.html"><img class="searchSec" src="http://cdn.qcacg.com/img/app_index/classification_05.png" alt="" /></a>
+      <img class="catalog" @click="showMenu" src="http://cdn.qcacg.com/img/app_index/classification_07.png" alt="" />
+      <div class="commonHeadMenu" style="display: none;" v-show="menuList">
+        <a href="./index.html" class="home">
+          <img src="http://cdn.qcacg.com/img/app_book/home.png"/>
+          <p>首页</p>
+        </a>
+        <a href="./classFirst.html" class="list">
+          <img src="http://cdn.qcacg.com/img/app_book/list.png"/>
+          <p>分类</p>
+        </a>
+        <a href="./rank.html" class="sort">
+          <img src="http://cdn.qcacg.com/img/app_book/cup.png"/>
+          <p>排行榜</p>
+        </a>
+        <a href="./personal.html" class="personal">
+          <img src="http://cdn.qcacg.com/img/app_book/personal.png"/>
+          <p>个人中心</p>
+        </a>
+      </div>
+    </div>
+    <div class="logo">
+        <img src="http://cdn.qcacg.com/img/app_book/logo.png"/>
+    </div>
+    <div class="loginInfo">
+        <input class="tel" type="text" v-model="userTele" placeholder="请输入手机号" />
+        <img class="userImg" src="http://cdn.qcacg.com/img/app_book/fff_03_update.png" alt="" />
+        <input class="password" type="password" v-model="userPassword" placeholder="请输入密码" />
+        <p class="wrong" style="display: none;" v-show="codeTrue">*密码错误</p>
+        <img class="passwordImg" src="http://cdn.qcacg.com/img/app_book/user_update.png" alt="" />
+        <div class="verify" style="display: none;" v-show="uuid">
+            <input type="text" placeholder="请输入验证码" v-model="picCode"/>
+            <img @click="getTime" class="vertifyPic" alt="验证码" :src="vertifyPic"/>
+        </div>
+    </div>
+    <div class="submit" @click="login">
+      <p>登录</p>
+    </div>
+    <div class="loginBottom">
+      <!--<a class="forget" href="password.html">忘记密码</a>-->
+      <a class="register" href="register.html"> 手机注册</a>
+    </div>
+    <appBottom></appBottom>
+    </div>
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/loginApp_e55ffc51be.js"></script>
+<script>
+	k_touch("login", "y");
+</script>
+</html>

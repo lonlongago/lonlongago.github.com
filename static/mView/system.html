@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+  <meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+  <meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+  <title>系统消息-QC轻小说</title>
+  <link rel="stylesheet" href="../css/main_app_c081deb24e.css" />
+  <style>
+  	body{padding-bottom:.8rem;background-color:#f4f4f4}
+		.system .content{margin:0 auto;position:relative;min-height:12rem}
+		.system .content .main{background-color:#fff;padding:3% 0;border-bottom:1px solid rgba(0,0,0,.055)}
+		.system .content .main .right{display:inline-block;vertical-align:middle;width:80%;margin-left:10%}
+		.system .content .main .right .title{font-size:.28rem;display:inline-block;width:75%;vertical-align:middle}
+		.system .content .main .right .title div{width:80%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+		.system .content .main .right .mess{font-size:.24rem;margin-top:3%;min-height:.26rem;text-indent:.26rem}
+		.system .content .main .right .uptime{display:inline-block;font-size:.2rem;color:#777;vertical-align:middle}
+
+  </style>
+</head>
+<body v-show="displayFlag" style="display: none;" id="system" class="system">
+	<div id="pull"></div>
+  <div class="content">
+    <div class="cephalosome">
+      <img @click="backFn" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+      <span>系统消息</span>
+    </div> 
+    <div class="main" v-for="obj in info">
+      <ul class="right">
+        <li class="title"><div>{{obj.messageTitle}}</div></li>
+        <li class="uptime">{{szxj.getLocalDate(obj.messageCreateDate)}}</li>
+        <li class="mess">{{obj.message}}</li>
+      </ul>  
+    </div>
+    <appBottom></appBottom>
+  </div>
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/systemApp_ba97c194e3.js"></script>
+<script>
+	k_touch("system", "y");
+</script>
+</html>

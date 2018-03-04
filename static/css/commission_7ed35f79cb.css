@@ -1,0 +1,10 @@
+.commissionContainer .commission{text-align:center}
+.commissionContainer .commission img{max-width:100%}
+.commissionContainer .commission a{display:inline-block;width:11.7%}
+.commissionContainer .commission .solicit{margin:50px 0}
+.commissionContainer .commission .signWelfare{position:relative}
+.commissionContainer .commission .signWelfare .welfareButton{position:absolute;right:22%;bottom:5%}
+.commissionContainer .commission .signStandard{position:relative;margin:50px 0}
+.commissionContainer .commission .signStandard .standardButton{position:absolute;right:22%;bottom:5%}
+.commissionContainer .commission .foot{position:relative}
+.commissionContainer .commission .foot .link a{display:inline-block;width:24%;height:15%;position:absolute;left:34%;top:25%}

@@ -1,0 +1,22 @@
+{	
+	"picture":[{
+            "index": 1,
+            "picture": "/img/Illustration/11_01.jpg",
+            "link": "/newCollect",
+            "introduce": "QC轻小说&nbsp;秋季征文&nbsp;"
+        },
+        {
+            "index": 2,
+            "picture": "/img/Illustration/11_02.jpg",
+            "link": "",
+            "introduce": "跟我们签订契约吧，你们这群萌新  ￣へ￣"
+        },
+        {
+            "index": 3,
+            "picture": "/img/Illustration/11_03.jpg",
+            "link": "/catalog/71",
+            "introduce": "小编推荐，独家签约《你的愿望，我确实听见了！》"
+        }
+    ],
+    "btnFlag": true
+}

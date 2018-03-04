@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+  <meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+  <meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+  <title>消息-QC轻小说</title>
+  <link rel="stylesheet" href="../css/main_app_c081deb24e.css" />
+  <style>
+    body{padding-bottom:.8rem;background-color:#f4f4f4}
+    .message .content{margin:0 auto;position:relative}
+    .message .content .main{background-color:#fff;padding:3% 0;border-bottom:1px solid rgba(0,0,0,.055)}
+    .message .content .main .head{width:.8rem;height:.8rem;margin-left:6%;margin-right:3%;vertical-align:middle;background-color:#00A1D6;border-radius:5rem;float:left}
+    .message .content .main .right{display:inline-block;vertical-align:middle;width:75%}
+    .message .content .main .right .title{font-size:.28rem;display:inline-block;width:75%;vertical-align:middle}
+    .message .content .main .right .title div{width:80%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .message .content .main .right .mess{font-size:.24rem;margin-top:3%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .message .content .main .right .uptime{display:inline-block;font-size:.2rem;color:#777;vertical-align:middle}
+    .message .content .main .right .reply{margin-top:3%;position:relative}
+    .message .content .main .right .reply .background{width:5.4rem;background-color:#fafafa;margin-right:0;padding:1.5%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.24rem;border-radius:.04rem}
+    .message .content .main .right .reply .triangle{position:absolute;top:-20%;left:3%;width:.12rem;height:.08rem;border:.04rem .04rem .12rem 0 solid #fafafa}
+    .message .content .window{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.3);}
+    .message .content .window .details{background-color:rgba(255,255,255,.9);padding:2.5% 0;font-size:.28rem;text-align:center;position:absolute;bottom:13%;width:100%}
+    .message .content .window .replySec{bottom:7%}
+    .message .content .window .cancel{bottom:0}
+
+  </style>
+</head>
+<body v-show="displayFlag" style="display: none;" id="message" class="message">
+	<div id="pull"></div>
+  <div class="content">
+    <div class="cephalosome">
+      <img @click="backFn" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+      <span>消息</span>
+    </div> 
+    <div class="main" v-for="obj in info">
+      <div @click="windowFn(obj.commentId,obj.userId,obj.bookId)">
+        <img class="head" :src="path.imagePath +obj.userHead" alt="" />
+          <ul class="right">
+            <li class="title"><div>{{obj.userName}}</div></li>
+            <li class="uptime">{{szxj.getLocalDate(obj.replyDate)}}</li>
+            <li class="mess">"{{obj.replyContent}}"</li>
+            <li class="reply">
+              <div class="background">“{{obj.commentContent}}”</div>
+              <img class="triangle" src="http://cdn.qcacg.com/img/app_index/reply_03.png" alt="" />
+            </li>
+          </ul>
+        </div>
+    </div>
+    <div v-if="windowFlag" class="window">
+      <div class="details" @click="viewDetails()">查看详情</div>
+      <div class="details replySec" @click="replyFn">回复</div>
+      <div class="details cancel" @click="windowFlagFn()">取消</div>
+    </div>
+    <appBottom></appBottom>
+  </div>      
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/messageApp_048fe172db.js"></script>
+<script>
+	k_touch("message", "y");
+</script>
+</html>

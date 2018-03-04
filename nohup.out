@@ -1,0 +1,1130 @@
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:1018:11)
+    at exports._exceptionWithHostPort (util.js:1041:20)
+    at Server._listen2 (net.js:1258:14)
+    at listen (net.js:1294:10)
+    at net.js:1404:9
+    at _combinedTickCallback (internal/process/next_tick.js:83:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+    at Module.runMain (module.js:606:11)
+    at run (bootstrap_node.js:389:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:504:3
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v6.11.1
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! nuxt@1.0.0 start: `nuxt start`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nuxt@1.0.0 start script 'nuxt start'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nuxt package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nuxt start
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nuxt
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nuxt
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/nuxt/npm-debug.log
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+null
+null
+null
+null
+null
+null
+null
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:1018:11)
+    at exports._exceptionWithHostPort (util.js:1041:20)
+    at Server._listen2 (net.js:1258:14)
+    at listen (net.js:1294:10)
+    at net.js:1404:9
+    at _combinedTickCallback (internal/process/next_tick.js:83:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+    at Module.runMain (module.js:606:11)
+    at run (bootstrap_node.js:389:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:504:3
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v6.11.1
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! nuxt@1.0.0 start: `nuxt start`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nuxt@1.0.0 start script 'nuxt start'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nuxt package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nuxt start
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nuxt
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nuxt
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/nuxt/npm-debug.log
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:1018:11)
+    at exports._exceptionWithHostPort (util.js:1041:20)
+    at Server._listen2 (net.js:1258:14)
+    at listen (net.js:1294:10)
+    at net.js:1404:9
+    at _combinedTickCallback (internal/process/next_tick.js:83:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+    at Module.runMain (module.js:606:11)
+    at run (bootstrap_node.js:389:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:504:3
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v6.11.1
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! nuxt@1.0.0 start: `nuxt start`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nuxt@1.0.0 start script 'nuxt start'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nuxt package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nuxt start
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nuxt
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nuxt
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/nuxt/npm-debug.log
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+{ Id: '256&' }
+{ Id: '257&' }
+{ Id: '266&' }
+{ Id: '256&' }
+{ Id: '&1376' }
+{ Id: '256&' }
+{ Id: '&1377' }
+{ isServer: true,
+  isClient: false,
+  isStatic: false,
+  isDev: false,
+  isHMR: false,
+  app: 
+   { router: 
+      VueRouter {
+        app: [Object],
+        apps: [Object],
+        options: [Object],
+        beforeHooks: [],
+        resolveHooks: [],
+        afterHooks: [],
+        matcher: [Object],
+        fallback: false,
+        mode: 'abstract',
+        history: [Object] },
+     _nuxt: 
+      { defaultTransition: [Object],
+        transitions: [Object],
+        setTransitions: [Function: setTransitions],
+        err: null,
+        dateErr: null,
+        error: [Function: error] },
+     head: { meta: [], link: [], style: [], script: [] },
+     data: [Function: data],
+     beforeCreate: [ [Function: beforeCreate], [Function: hook] ],
+     created: [Function: created],
+     mounted: [Function: mounted],
+     watch: { 'nuxt.err': 'errorChanged' },
+     methods: 
+      { errorChanged: [Function: errorChanged],
+        setLayout: [Function: setLayout],
+        loadLayout: [Function: loadLayout] },
+     components: { NuxtLoading: [Object] },
+     render: [Function: render],
+     staticRenderFns: [],
+     _ssrRegister: [Function: hook] },
+  route: 
+   { name: 'mView-goodMan-bookId',
+     meta: {},
+     path: '/mView/goodMan',
+     hash: '',
+     query: {},
+     params: { bookId: undefined },
+     fullPath: '/mView/goodMan',
+     matched: [ [Object], [Object] ] },
+  payload: undefined,
+  error: [Function: bound error],
+  base: '/',
+  env: {},
+  params: { bookId: undefined },
+  query: {},
+  redirect: [Function],
+  req: 
+   IncomingMessage {
+     _readableState: 
+      ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: [Object],
+        length: 0,
+        pipes: null,
+        pipesCount: 0,
+        flowing: null,
+        ended: true,
+        endEmitted: false,
+        reading: false,
+        sync: true,
+        needReadable: false,
+        emittedReadable: true,
+        readableListening: false,
+        resumeScheduled: false,
+        defaultEncoding: 'utf8',
+        ranOut: false,
+        awaitDrain: 0,
+        readingMore: true,
+        decoder: null,
+        encoding: null },
+     readable: true,
+     domain: null,
+     _events: {},
+     _eventsCount: 0,
+     _maxListeners: undefined,
+     socket: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 119611,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5085767,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Object] },
+     connection: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 119611,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5085767,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Object] },
+     httpVersionMajor: 1,
+     httpVersionMinor: 1,
+     httpVersion: '1.1',
+     complete: true,
+     headers: 
+      { host: '116.62.159.44:3000',
+        connection: 'keep-alive',
+        'upgrade-insecure-requests': '1',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/603.2.4 (KHTML, like Gecko) Mobile/14F89 Html5Plus/1.0 (Immersed/20)',
+        referer: 'http://116.62.159.44:3000/mView/userInfo',
+        'accept-language': 'zh-cn',
+        'accept-encoding': 'gzip, deflate' },
+     rawHeaders: 
+      [ 'Host',
+        '116.62.159.44:3000',
+        'Connection',
+        'keep-alive',
+        'Upgrade-Insecure-Requests',
+        '1',
+        'Accept',
+        'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'User-Agent',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/603.2.4 (KHTML, like Gecko) Mobile/14F89 Html5Plus/1.0 (Immersed/20)',
+        'Referer',
+        'http://116.62.159.44:3000/mView/userInfo',
+        'Accept-Language',
+        'zh-cn',
+        'Accept-Encoding',
+        'gzip, deflate' ],
+     trailers: {},
+     rawTrailers: [],
+     upgrade: false,
+     url: '/mView/goodMan',
+     method: 'GET',
+     statusCode: null,
+     statusMessage: null,
+     client: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 119611,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5085767,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Object] },
+     _consuming: false,
+     _dumped: false,
+     originalUrl: '/mView/goodMan',
+     _parsedUrl: 
+      Url {
+        protocol: null,
+        slashes: null,
+        auth: null,
+        host: null,
+        port: null,
+        hostname: null,
+        hash: null,
+        search: null,
+        query: null,
+        pathname: '/mView/goodMan',
+        path: '/mView/goodMan',
+        href: '/mView/goodMan',
+        _raw: '/mView/goodMan' },
+     _parsedOriginalUrl: 
+      Url {
+        protocol: null,
+        slashes: null,
+        auth: null,
+        host: null,
+        port: null,
+        hostname: null,
+        hash: null,
+        search: null,
+        query: null,
+        pathname: '/mView/goodMan',
+        path: '/mView/goodMan',
+        href: '/mView/goodMan',
+        _raw: '/mView/goodMan' } },
+  res: 
+   ServerResponse {
+     domain: null,
+     _events: { finish: [Function: resOnFinish] },
+     _eventsCount: 1,
+     _maxListeners: undefined,
+     output: [],
+     outputEncodings: [],
+     outputCallbacks: [],
+     outputSize: 0,
+     writable: true,
+     _last: false,
+     upgrading: false,
+     chunkedEncoding: false,
+     shouldKeepAlive: true,
+     useChunkedEncodingByDefault: true,
+     sendDate: true,
+     _removedHeader: {},
+     _contentLength: null,
+     _hasBody: true,
+     _trailer: '',
+     finished: false,
+     _headerSent: false,
+     socket: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 119611,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5085767,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Circular] },
+     connection: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 119611,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5085767,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Circular] },
+     _header: null,
+     _headers: null,
+     _headerNames: {},
+     _onPendingData: [Function: updateOutgoingData],
+     flush: [Function: flush],
+     write: [Function: write],
+     end: [Function: end],
+     on: [Function: on],
+     writeHead: [Function: writeHead],
+     statusCode: 200 },
+  beforeNuxtRender: [Function] }
+undefined
+{ isServer: true,
+  isClient: false,
+  isStatic: false,
+  isDev: false,
+  isHMR: false,
+  app: 
+   { router: 
+      VueRouter {
+        app: [Object],
+        apps: [Object],
+        options: [Object],
+        beforeHooks: [],
+        resolveHooks: [],
+        afterHooks: [],
+        matcher: [Object],
+        fallback: false,
+        mode: 'abstract',
+        history: [Object] },
+     _nuxt: 
+      { defaultTransition: [Object],
+        transitions: [Object],
+        setTransitions: [Function: setTransitions],
+        err: null,
+        dateErr: null,
+        error: [Function: error] },
+     head: { meta: [], link: [], style: [], script: [] },
+     data: [Function: data],
+     beforeCreate: [ [Function: beforeCreate], [Function: hook] ],
+     created: [Function: created],
+     mounted: [Function: mounted],
+     watch: { 'nuxt.err': 'errorChanged' },
+     methods: 
+      { errorChanged: [Function: errorChanged],
+        setLayout: [Function: setLayout],
+        loadLayout: [Function: loadLayout] },
+     components: { NuxtLoading: [Object] },
+     render: [Function: render],
+     staticRenderFns: [],
+     _ssrRegister: [Function: hook] },
+  route: 
+   { name: 'mView-goodMan-bookId',
+     meta: {},
+     path: '/mView/goodMan',
+     hash: '',
+     query: {},
+     params: { bookId: undefined },
+     fullPath: '/mView/goodMan',
+     matched: [ [Object], [Object] ] },
+  payload: undefined,
+  error: [Function: bound error],
+  base: '/',
+  env: {},
+  params: { bookId: undefined },
+  query: {},
+  redirect: [Function],
+  req: 
+   IncomingMessage {
+     _readableState: 
+      ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: [Object],
+        length: 0,
+        pipes: null,
+        pipesCount: 0,
+        flowing: null,
+        ended: true,
+        endEmitted: false,
+        reading: false,
+        sync: true,
+        needReadable: false,
+        emittedReadable: true,
+        readableListening: false,
+        resumeScheduled: false,
+        defaultEncoding: 'utf8',
+        ranOut: false,
+        awaitDrain: 0,
+        readingMore: true,
+        decoder: null,
+        encoding: null },
+     readable: true,
+     domain: null,
+     _events: {},
+     _eventsCount: 0,
+     _maxListeners: undefined,
+     socket: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 126379,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5090559,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Object] },
+     connection: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 126379,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5090559,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Object] },
+     httpVersionMajor: 1,
+     httpVersionMinor: 1,
+     httpVersion: '1.1',
+     complete: true,
+     headers: 
+      { host: '116.62.159.44:3000',
+        connection: 'keep-alive',
+        'if-none-match': 'W/"4702-XJp6Zg2dqYUd1Mgn1bvFg/G9pyY"',
+        'upgrade-insecure-requests': '1',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/603.2.4 (KHTML, like Gecko) Mobile/14F89 Html5Plus/1.0 (Immersed/20)',
+        referer: 'http://116.62.159.44:3000/mView/userInfo',
+        'accept-language': 'zh-cn',
+        'accept-encoding': 'gzip, deflate' },
+     rawHeaders: 
+      [ 'Host',
+        '116.62.159.44:3000',
+        'Connection',
+        'keep-alive',
+        'If-None-Match',
+        'W/"4702-XJp6Zg2dqYUd1Mgn1bvFg/G9pyY"',
+        'Upgrade-Insecure-Requests',
+        '1',
+        'Accept',
+        'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'User-Agent',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/603.2.4 (KHTML, like Gecko) Mobile/14F89 Html5Plus/1.0 (Immersed/20)',
+        'Referer',
+        'http://116.62.159.44:3000/mView/userInfo',
+        'Accept-Language',
+        'zh-cn',
+        'Accept-Encoding',
+        'gzip, deflate' ],
+     trailers: {},
+     rawTrailers: [],
+     upgrade: false,
+     url: '/mView/goodMan',
+     method: 'GET',
+     statusCode: null,
+     statusMessage: null,
+     client: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 126379,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5090559,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Object] },
+     _consuming: false,
+     _dumped: false,
+     originalUrl: '/mView/goodMan',
+     _parsedUrl: 
+      Url {
+        protocol: null,
+        slashes: null,
+        auth: null,
+        host: null,
+        port: null,
+        hostname: null,
+        hash: null,
+        search: null,
+        query: null,
+        pathname: '/mView/goodMan',
+        path: '/mView/goodMan',
+        href: '/mView/goodMan',
+        _raw: '/mView/goodMan' },
+     _parsedOriginalUrl: 
+      Url {
+        protocol: null,
+        slashes: null,
+        auth: null,
+        host: null,
+        port: null,
+        hostname: null,
+        hash: null,
+        search: null,
+        query: null,
+        pathname: '/mView/goodMan',
+        path: '/mView/goodMan',
+        href: '/mView/goodMan',
+        _raw: '/mView/goodMan' } },
+  res: 
+   ServerResponse {
+     domain: null,
+     _events: { finish: [Function: resOnFinish] },
+     _eventsCount: 1,
+     _maxListeners: undefined,
+     output: [],
+     outputEncodings: [],
+     outputCallbacks: [],
+     outputSize: 0,
+     writable: true,
+     _last: false,
+     upgrading: false,
+     chunkedEncoding: false,
+     shouldKeepAlive: true,
+     useChunkedEncodingByDefault: true,
+     sendDate: true,
+     _removedHeader: {},
+     _contentLength: null,
+     _hasBody: true,
+     _trailer: '',
+     finished: false,
+     _headerSent: false,
+     socket: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 126379,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5090559,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Circular] },
+     connection: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: null,
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 10,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        destroyed: false,
+        _bytesDispatched: 126379,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 5090559,
+        parser: [Object],
+        on: [Function: socketOnWrap],
+        _paused: false,
+        _peername: [Object],
+        read: [Function],
+        _consuming: true,
+        _httpMessage: [Circular] },
+     _header: null,
+     _headers: null,
+     _headerNames: {},
+     _onPendingData: [Function: updateOutgoingData],
+     flush: [Function: flush],
+     write: [Function: write],
+     end: [Function: end],
+     on: [Function: on],
+     writeHead: [Function: writeHead],
+     statusCode: 200 },
+  beforeNuxtRender: [Function] }
+undefined
+TypeError: Cannot read property 'contentId' of undefined
+    at pages/mView/book.e76a9f61478234bb5602.js:1525:137
+    at wrap (/home/nuxt/node_modules/_axios@0.16.2@axios/lib/helpers/spread.js:25:21)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:1018:11)
+    at exports._exceptionWithHostPort (util.js:1041:20)
+    at Server._listen2 (net.js:1258:14)
+    at listen (net.js:1294:10)
+    at net.js:1404:9
+    at _combinedTickCallback (internal/process/next_tick.js:83:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+    at Module.runMain (module.js:606:11)
+    at run (bootstrap_node.js:389:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:504:3
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v6.11.1
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! nuxt@1.0.0 start: `nuxt start`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nuxt@1.0.0 start script 'nuxt start'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nuxt package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nuxt start
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nuxt
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nuxt
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/nuxt/npm-debug.log
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:1018:11)
+    at exports._exceptionWithHostPort (util.js:1041:20)
+    at Server._listen2 (net.js:1258:14)
+    at listen (net.js:1294:10)
+    at net.js:1404:9
+    at _combinedTickCallback (internal/process/next_tick.js:83:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+    at Module.runMain (module.js:606:11)
+    at run (bootstrap_node.js:389:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:504:3
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/local/bin/npm" "run" "start"
+npm ERR! node v6.11.1
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! nuxt@1.0.0 start: `nuxt start`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nuxt@1.0.0 start script 'nuxt start'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nuxt package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nuxt start
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nuxt
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nuxt
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/nuxt/npm-debug.log
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:1018:11)
+    at exports._exceptionWithHostPort (util.js:1041:20)
+    at Server._listen2 (net.js:1258:14)
+    at listen (net.js:1294:10)
+    at net.js:1404:9
+    at _combinedTickCallback (internal/process/next_tick.js:83:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+    at Module.runMain (module.js:606:11)
+    at run (bootstrap_node.js:389:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:504:3
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/local/bin/npm" "run" "start"
+npm ERR! node v6.11.1
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! nuxt@1.0.0 start: `nuxt start`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nuxt@1.0.0 start script 'nuxt start'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nuxt package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nuxt start
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nuxt
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nuxt
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/nuxt/npm-debug.log
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:1018:11)
+    at exports._exceptionWithHostPort (util.js:1041:20)
+    at Server._listen2 (net.js:1258:14)
+    at listen (net.js:1294:10)
+    at net.js:1404:9
+    at _combinedTickCallback (internal/process/next_tick.js:83:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+    at Module.runMain (module.js:606:11)
+    at run (bootstrap_node.js:389:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:504:3
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/local/bin/npm" "run" "start"
+npm ERR! node v6.11.1
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! nuxt@1.0.0 start: `nuxt start`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nuxt@1.0.0 start script 'nuxt start'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nuxt package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nuxt start
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nuxt
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nuxt
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/nuxt/npm-debug.log
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:1018:11)
+    at exports._exceptionWithHostPort (util.js:1041:20)
+    at Server._listen2 (net.js:1258:14)
+    at listen (net.js:1294:10)
+    at net.js:1404:9
+    at _combinedTickCallback (internal/process/next_tick.js:83:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+    at Module.runMain (module.js:606:11)
+    at run (bootstrap_node.js:389:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:504:3
+
+npm ERR! Linux 3.10.0-514.6.2.el7.x86_64
+npm ERR! argv "/usr/bin/node" "/usr/local/bin/npm" "run" "start"
+npm ERR! node v6.11.1
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! nuxt@1.0.0 start: `nuxt start`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the nuxt@1.0.0 start script 'nuxt start'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the nuxt package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nuxt start
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs nuxt
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls nuxt
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/nuxt/npm-debug.log
+
+> nuxt@1.0.0 start /home/nuxt
+> nuxt start
+
+
+ OPEN  http://localhost:3000
+

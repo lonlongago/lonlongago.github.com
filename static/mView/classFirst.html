@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+	<meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+	<meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+	<title>一级分类-QC轻小说</title>
+	<link rel="stylesheet" href="../css/main_app_c081deb24e.css" />
+	<style>
+		.classFirst .content{max-width: 750px;overflow-x: hidden;margin:0 auto;}
+		.classFirst .content .subject .block{background-color:#1BBC9B;width:1.2rem;height:1.2rem;border-radius:.05rem;display:block}
+		.classFirst .content .subject .book_name{display:inline-block;width:1.2rem;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:.09rem;font-size:.32rem;line-height:.35rem;}
+		.classFirst .content .subject .son{margin-left:.52rem;display:inline-block;margin-top:.2rem}
+	</style>
+</head>
+<body>
+<div v-show="displayFlag" style="display: none;" class="classFirst" id="classFirst">
+	<div id="pull"></div>
+  <div class="content">
+    <div class="blackWrap" style="display: none;" v-show="toWrap" @click="showMenu"></div>
+    <div class="cephalosome">
+      <img @click="backFn" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+      <span>分类</span>
+      <a href="./search.html"><img class="searchSec" src="http://cdn.qcacg.com/img/app_index/classification_05.png" alt="" /></a>
+      <img class="catalog" @click="showMenu" src="http://cdn.qcacg.com/img/app_index/classification_07.png" alt="" />
+      <div class="commonHeadMenu" style="display: none;" v-show="menuList">
+          <a href="./index.html" class="home">
+              <img src="http://cdn.qcacg.com/img/app_book/home.png"/>
+              <p>首页</p>
+          </a>
+          <a href="./classFirst.html" class="list">
+              <img src="http://cdn.qcacg.com/img/app_book/list.png"/>
+              <p>分类</p>
+          </a>
+          <a href="./rank.html" class="sort">
+              <img src="http://cdn.qcacg.com/img/app_book/cup.png"/>
+              <p>排行榜</p>
+          </a>
+          <a href="./personal.html" class="personal">
+              <img src="http://cdn.qcacg.com/img/app_book/personal.png"/>
+              <p>个人中心</p>
+          </a>
+      </div>
+    </div> 
+    <div class="subject">
+        <a class="son" @click="gotoFn('')" >
+          <img class="block"  :src="path.rootPath + '/img/booktype/' + 0 + '.jpg' " >
+          <div class="book_name">全部</div>
+        </a>     
+        <a class="son" @click="gotoFn(obj.bookTypeId)" v-for="obj in typeName" >
+          <img class="block"  :src="path.rootPath + '/img/booktype/' + obj.bookTypeId + '.jpg' " >
+          <div class="book_name">{{obj.bookTypeName}}</div>
+        </a>         
+    </div>
+    <appBottom></appBottom>
+  </div>     
+</div>
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/classApp_87eba917f7.js"></script>
+<script>
+	k_touch("classFirst", "y");
+</script>
+</html>

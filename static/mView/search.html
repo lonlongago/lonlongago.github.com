@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>搜索-QC轻小说</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+  <meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+  <meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+  <link rel="stylesheet" type="text/css" href="../css/main_app_c081deb24e.css" />
+  <style type="text/css">
+  	
+		[v-cloak]{display:none;}
+		</style>
+</head>
+<body id="searchWrap">
+  <div class="searchWrap" v-cloak>
+    <div class="search">
+    	
+      
+      <div class="cephalosome searchHead">
+	      <img @click="back" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+	      <input type="text" v-model="searchContent" />
+	      <img class="catalog" @click="search" src="http://cdn.qcacg.com/img/app_index/classification_05.png" alt="" />
+	    </div>
+    	
+      <div class="searchTop" v-show="tagFlag">
+        <p class="hotTag">热门标签</p>
+        <ul class="tag">
+          <li v-cloak v-for="list in searchList">
+            <a href="javascript:;" @click="goTag(list)">
+              <p v-cloak >{{list}}</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/searchApp_e0bcc7f9e9.js"></script>
+</html>

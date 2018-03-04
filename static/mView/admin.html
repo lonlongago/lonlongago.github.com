@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+	<meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+	<meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+	<title>小说管理-QC轻小说</title>
+	<link rel="stylesheet" href="../css/main_app_c081deb24e.css" />
+	<style>
+	@font-face{font-family:sansSerif;src:url('../font/app-font/Microsoft Sans Serif.eot');src:url('../font/app-font/Microsoft Sans Serif.eot?#iefix') format('embedded-opentype'),url('../font/app-font/Microsoft Sans Serif.woff') format('woff'),url('../font/app-font/Microsoft Sans Serif.woff2') format('woff'),url('../font/app-font/Microsoft Sans Serif.ttf') format('truetype'),url('../font/app-font/Microsoft Sans Serif.svg#YourWebFontName') format('svg')}
+	*{margin:0;padding:0;font-family:sansSerif;list-style:none;text-decoration:none;color:#000;line-height: 1.1;}
+	a:visited{color:#000}
+	body{background-color:#f4f4f4;padding-bottom:.8rem;}
+	.admin .content{margin:0 auto;max-width: 750px;overflow-x: hidden;}
+	.admin .content .section .book{overflow:hidden}
+	.admin .content .section .book .book_nav{margin:3% 0 2% 4%;width:1.5rem;text-align:center;float:left}
+	.admin .content .section .book .book_nav img{width:1.2rem;height:1.7rem;background-color:#adff2f;margin-bottom:5%}
+	.admin .content .section .book .book_nav .booktitle{font-size:.24rem}
+	</style>
+</head>
+<body v-show="displayFlag" style="display: none;" class="admin" id="admin">
+	<div id="pull"></div>
+  	<div class="content">
+    	<div class="blackWrap" style="display: none;" v-show="toWrap" @click="showMenu"></div>
+    	<div class="cephalosome">
+        <img @click="backFn" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+        <span class="title">小说管理</span>
+        <a href="./search.html"><img class="searchSec" src="http://cdn.qcacg.com/img/app_index/classification_05.png" alt="" /></a>
+        <img class="catalog" @click="showMenu" src="http://cdn.qcacg.com/img/app_index/classification_07.png" alt="" />
+                  <div class="commonHeadMenu" style="display: none;" v-show="menuList">
+                      <a href="./index.html" class="home">
+                          <img src="http://cdn.qcacg.com/img/app_book/home.png"/>
+                          <p>首页</p>
+                      </a>
+                      <a href="./classFirst.html" class="list">
+                          <img src="http://cdn.qcacg.com/img/app_book/list.png"/>
+                          <p>分类</p>
+                      </a>
+                      <a href="./rank.html" class="sort">
+                          <img src="http://cdn.qcacg.com/img/app_book/cup.png"/>
+                          <p>排行榜</p>
+                      </a>
+                      <a href="./personal.html" class="personal">
+                          <img src="http://cdn.qcacg.com/img/app_book/personal.png"/>
+                          <p>个人中心</p>
+                      </a>
+                  </div>
+      </div> 
+      <div class="section"> 
+         <ul class="book">
+           <li class="book_nav" v-for="obj in bookList" >
+             <a :href="path.TemprootPath + '/mView/book.html?bookId=' + obj.bookId">
+                 <img :src="path.imagePath + obj.bookCoverImage" alt="" />
+                 <div class="booktitle">{{obj.bookName}}</div>
+             </a>
+           </li>
+         </ul>
+      </div>
+      <appBottom></appBottom>
+    </div>      
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/adminApp_ebda4a5157.js"></script>
+<script>
+	k_touch("admin", "y");
+</script>
+</html>

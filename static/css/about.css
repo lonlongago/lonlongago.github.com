@@ -1,0 +1,174 @@
+.aboutContainer .wrap{
+    min-width: 1200px;
+    margin: 0 auto;
+}
+.aboutContainer .wrap a:link{
+    text-decoration: none;
+    color: #000000;
+}
+.aboutContainer .wrap a:hover{
+    color: #F26A81; 
+}
+.aboutContainer .wrap #background {
+    background: url(../img/Catalog-bj2.jpg) no-repeat;
+    height: 202px;
+    min-width: 1200px;
+    width: 100%;
+    margin-top: -57px;
+  }
+.aboutContainer .wrap .contextWrap .context h3{
+    text-align: center;
+    margin: 20px auto;
+    
+    border-bottom: 1px solid #D6D6D6;
+    padding-bottom: 20px;
+}
+.aboutContainer .wrap .contextWrap .context h4{
+    margin: 30px auto;
+    font-size: 15px;
+}
+.aboutContainer .wrap .wrap_div .list ul li .list_li_div {
+  position: absolute;
+  right: -13px;
+  top: -3px;
+  width: 5px;
+  height: 20px;
+  background-color: #F26A81;
+  display: none;
+}
+.aboutContainer .wrap .wrap_div .list ul li .active {
+  color: #F26A81 !important;
+
+ 
+}
+.aboutContainer .wrap .wrap_div .list ul li .activeTow {
+   display: block;
+}
+.aboutContainer .wrap .wrap_div{
+  min-height: 640px;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  position: relative;
+}
+.aboutContainer .wrap .wrap_div .list{
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 150px;
+    box-sizing: border-box;
+
+    display: inline-block;
+    font-size: 14px;
+    border-right: 1px solid #DDDDDD;
+    margin-top: 50px;
+}
+.aboutContainer .wrap .wrap_div .list ul{
+    margin: 15px auto;
+   
+}
+.aboutContainer .wrap .wrap_div .list li{
+    margin-top: 35px;
+    text-align: right;
+    margin-right: 10px;
+    position: relative;
+}
+.aboutContainer .wrap .wrap_div .contextWrap{
+    width: 850px;
+    min-height: 500px;
+     position: relative;
+     top: 0;
+     left: 250px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #DEE5EB;
+   
+    margin-top: 40px;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .contextTitle{
+    height: 50px;
+    padding-left: 20px;
+    line-height: 25px;
+    font-size: 16px;
+    color: #7b7f82;
+    background-color: #fff;
+    line-height: 50px;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context{
+    box-sizing: border-box;
+    padding: 20px 50px;
+    border-top: 1px solid #DEE5EB;
+    font-size: 14px;
+    color: #7b7f82;
+
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context p,.context li{
+    padding: 0;
+    line-height: 3em;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context p{
+    text-indent: 2em;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context table{
+    position: relative;
+    left: 2em;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context li{
+    text-indent: 2em;
+    padding-left: 2em;
+    font-size: 15px;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context li>p{
+    text-indent: 2em;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context ol li{
+    list-style: decimal inside;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context li>p{
+    text-indent: 2em;
+    padding-left: 2em;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context p{
+    text-indent: 2em;
+    padding-left: 0;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context li>ol{
+    padding-left: 2em;
+    margin-bottom: 20px;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context table{
+    text-align: center;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context table th,.context table td{
+    height: 3em;
+    width: 180px;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context ul{
+    text-indent: 2em;
+    margin-bottom: 20px;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context ol{
+    text-indent: 2em;
+    margin-bottom: 20px;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context #about p{
+    font-weight: 500;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context #about p.group{
+    margin-top: 20px;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context #subPro{
+    margin: 0;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context #submission p{
+    text-indent: 2em;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context #signSys ol p{
+    padding-left: 2em;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context #author p{
+    padding-left: 2em;
+}
+.aboutContainer .wrap .wrap_div .contextWrap .context #author ol{
+    padding-left: 0;
+}

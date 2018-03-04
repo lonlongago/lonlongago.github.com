@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>目录-QC轻小说</title>
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+	<meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+	<link rel="stylesheet" type="text/css" href="../css/main_app_c081deb24e.css"/>
+    <style type="text/css">
+  	body{padding-bottom: .4rem;}
+		[v-cloak]{display:none}
+		.catalogWrap .catalogHead{margin-top:.2rem;padding-bottom:.18rem;font-size:.28rem;text-align:center;color:#5A5A5A;border-bottom:1px solid #E6E6E6}
+		.catalogWrap .lastRead{display:block;padding-top:.18rem;padding-bottom:.14rem;padding-left:.37rem;font-size:.34rem;color:#A1A1A1}
+		.catalogWrap .catalog .volumeList .volumeName{padding-top:.09rem;padding-bottom:.09rem;font-size:.28rem;padding-left:.4rem;color:#3A3A3A;background-color:#EEE}
+		.catalogWrap .catalog .volumeList .volumeName .volumeLine{display:inline-block;width:.06rem;height:.21rem;border-radius:.3rem;background-color:#BFBFBF}
+		.catalogWrap .catalog .volumeList .volumeName p{display:inline-block;vertical-align:top;padding-top:.03rem;font-size: 0.28rem;}
+		.catalogWrap .catalog .volumeList .chapterList .chapterName{padding-top:.2rem;padding-bottom:.13rem;padding-left:.7rem;font-size:.24rem;color:#3A3A3A;border-bottom:1px solid #E1E1E1}
+		.catalogWrap .catalog .volumeList .chapterList .chapterName a{display:block}
+		.catalogWrap .catalog .volumeList .chapterList .chapterName span{color: #F26A81;font-size: 0.2rem;display: inline-block;margin-left: 0.3rem;vertical-align: bottom;}
+		.catalogWrap .active{background-color:#000;color:#FFF;opacity:.3}
+		.catalogWrap .catalog .volumeList .chapterList .active{background-color:#000;color:#FFF;opacity:.3}
+	</style>
+</head>
+<body id="catalogWrap" v-show="displayFlag" >
+	<div class="catalogWrap">
+		<div class="cephalosome">
+      <img @click="back" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+      <span v-cloak>{{bookName}}</span>
+    </div>
+		<div class="catalogHead">
+		    <p>目录</p>
+		</div>
+		<a :href="'./read.html?bookId=' + bookId + '&contentId=' + bookHistory.contentId">
+		    <div class="lastRead" v-if="bookHistory">
+		    	<p v-cloak>上次看到：{{lastRead}}</p>
+		    </div>
+		</a>
+		<div class="catalog">
+		    <ul class="volumeList">
+		        <li v-for="volume in volumeList" v-cloak>
+	    	        <div class="volumeName">
+	    	            <span class="volumeLine"></span>
+	    	            <p>{{volume.volumeName}}</p>
+	    	        </div>
+		    	    <ul class="chapterList">
+		    	        <li v-for="chapter in volume.contentEntityList">
+		    	            <a :href="'./read.html?bookId=' + bookId + '&contentId=' + chapter.contentId">
+		    	                <div class="chapterName">
+		    	                    <p>{{chapter.contentTitle}}<span v-if="lastContentTitle == chapter.contentId ">New:最新章节</span></p>
+		    	                </div>
+		    	            </a>
+		    	        </li>
+		    	    </ul>
+		        </li>
+		    </ul>
+		</div>
+	</div>
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/catalogApp_6d41dd19b1.js"></script>
+<script>
+	k_touch("catalogWrap", "y");
+</script>
+</html>

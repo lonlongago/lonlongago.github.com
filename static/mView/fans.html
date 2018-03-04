@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="keywords" content="QC,QCACG,QC轻小说,轻小说,轻文,原创轻小说,轻小说投稿">
+	<meta name="description" content="QC原创轻小说，一个在二次元盛起的魔法圣殿，拥有魔幻与神奇色彩，为二次元提供轻小说投稿与画师约稿相结合的平台。加入我们，接受契约，用轻松奇幻的文字留下你心中的故事。 ">
+	<meta name="baidu_union_verify" content="1dbb2d68c26ba734e502097619803d73">
+	<title>粉丝-QC轻小说</title>
+	<style>
+		@font-face{font-family:sansSerif;src:url('../font/app-font/Microsoft Sans Serif.eot');src:url('../font/app-font/Microsoft Sans Serif.eot?#iefix') format('embedded-opentype'),url('../font/app-font/Microsoft Sans Serif.woff') format('woff'),url('../font/app-font/Microsoft Sans Serif.woff2') format('woff'),url('../font/app-font/Microsoft Sans Serif.ttf') format('truetype'),url('../font/app-font/Microsoft Sans Serif.svg#YourWebFontName') format('svg')}
+		*{margin:0;padding:0;font-family:sansSerif;list-style:none;text-decoration:none;color:#000;line-height: 1.1;}
+		a:visited{color:#000}
+		body{background-color:#f4f4f4;padding-bottom:.8rem;}
+		.fans .content{margin:0 auto}
+		
+		.fans .content .cephalosome{position:relative;z-index:10;background-color:#fff;box-shadow:0 .03rem .05rem #ececec;margin-bottom: 3%;}
+		.fans .content .cephalosome .title{margin:0 auto;width:1.5rem;height:.8rem;text-align:center}
+		.fans .content .cephalosome .title .record{height:.4rem;font-size:.32rem;line-height:.4rem;margin:.2rem 0;box-sizing:border-box;color:#00A1D6;display:block;width:.75rem;float:left;border-radius:.04rem}
+		.fans .content .cephalosome .title .shelf{height:.4rem;font-size:.32rem;line-height:.4rem;margin:.2rem 0;box-sizing:border-box;color:#fff;display:block;width:.75rem;float:left;background-color:#1CC8ED;border-radius:.04rem}
+		.fans .content .cephalosome .back{position: absolute;left: 7%;height: .8rem;padding: .25rem 0;box-sizing: border-box;}
+		.fans .content .cephalosome .searchSec{position: absolute;right: 14.4%;top: 0;height: .8rem;padding: .25rem 0;box-sizing: border-box;}
+		.fans .content .cephalosome .catalog{position: absolute;right: 7%;top: 0;height: .8rem;padding: .25rem 0;box-sizing: border-box;}
+		 
+		
+		
+		.fans .content .section .info{background-color:#fff;padding:2% 0;overflow:hidden;border-bottom:1px solid rgba(0,0,0,.065)}
+		.fans .content .section .info .head{width:.8rem;height:.8rem;border-radius:1rem;margin-left:8%;margin-right:3%;background-color:#00A1D6;vertical-align:middle}
+		.fans .content .section .info .name{font-size:.28rem;display:inline-block;vertical-align:middle}
+		.fans .content .section .info .cancel{float:right;padding:.25% 2.5%;border-radius:1rem;border:1px #00A1D6 solid;margin-top:3.2%;margin-right:10%;color:#00A1D6;font-size:.24rem}
+		.fans .blackWrap{background-color:#000;opacity:.4;width:100%;height:100%;position:fixed;left:0;top:0;z-index:10}
+		.fans .commonHeadMenu{text-align:center;padding-top:.3rem;padding-bottom:.37rem;width:100%;background-color:#FFF;position:absolute;top:.6rem;z-index:10}
+		.fans .commonHeadMenu a{display:inline-block;margin:0 6%}
+		.fans .commonHeadMenu a img{display:block;width:.26rem;height:.26rem;margin:0 auto}
+		.fans .commonHeadMenu a p{margin-top:.08rem;font-size:.22rem;color:#232323}
+
+	</style>
+</head>
+<body v-show="displayFlag" style="display: none;" id="fans" class="fans">
+	<div id="pull"></div>
+  <div class="content">
+        <div class="blackWrap" style="display: none;" v-show="toWrap"  @click="showMenu"></div>
+        <div class="cephalosome">
+          <img @click="backFn" class="back" src="http://cdn.qcacg.com/img/app_index/classification_03.png" alt="" />
+          <div class="title">
+            <span @click="getValueFn"  :class=" flag == 0 ? 'shelf' : 'record'" style="border-radius: .04rem 0 0 .04rem;border:1px solid #1CC8ED;">关注</span>
+            <span @click="getValueFnSec"  :class=" flag == 1 ? 'shelf' : 'record'" style="border-radius: 0 .04rem .04rem 0;border:1px solid #1CC8ED;">粉丝</span>
+          </div>
+          <a href="./search.html"><img class="searchSec" src="http://cdn.qcacg.com/img/app_index/classification_05.png" alt="" /></a>
+          <img @click="showMenu" class="catalog" src="http://cdn.qcacg.com/img/app_index/classification_07.png" alt="" />
+                    <div class="commonHeadMenu" style="display: none;" v-show="menuList">
+                        <a href="./index.html" class="home">
+                            <img src="http://cdn.qcacg.com/img/app_book/home.png"/>
+                            <p>首页</p>
+                        </a>
+                        <a href="./classFirst.html" class="list">
+                            <img src="http://cdn.qcacg.com/img/app_book/list.png"/>
+                            <p>分类</p>
+                        </a>
+                        <a href="./rank.html" class="sort">
+                            <img src="http://cdn.qcacg.com/img/app_book/cup.png"/>
+                            <p>排行榜</p>
+                        </a>
+                        <a href="./personal.html" class="personal">
+                            <img src="http://cdn.qcacg.com/img/app_book/personal.png"/>
+                            <p>个人中心</p>
+                        </a>
+                    </div>
+        </div> 
+        <div class="section" v-if="flag == 0"  v-for="sos in info"> 
+           <div class="info">
+             <img class="head" :src="path.imagePath + sos.userHead" alt="" />
+             <span class="name">{{sos.userName}}</span>
+             <div @click="attentionFn(sos.userId)" class="cancel">取消关注</div>
+           </div>  
+        </div>
+        
+        <div class="section" v-if="flag == 1" v-for="sos in infoSec"> 
+           <div class="info">
+             <img class="head" :src="path.imagePath + sos.userHead" alt="" />
+             <span class="name">{{sos.userName}}</span>
+             <div v-if="sos.attention" @click="attentionFnSec(sos.userId)" class="cancel">已关注</div>
+             <div v-else  @click="attentionFnSec(sos.userId)" class="cancel">+关注</div>
+           </div>  
+        </div>
+        <appBottom></appBottom>
+      </div>      
+</body>
+<script src="../lib/resize.js"></script>
+<script src="../lib/pullToRefresh.js"></script>
+<script src="../js/app/fansApp_bf54b641dc.js"></script>
+<script>
+	k_touch("fans", "y");
+</script>
+</html>
